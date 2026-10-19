@@ -1,0 +1,34 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<testsuites tests="11" failures="0" errors="0" skipped="0" time="0.000" timestamp="2026-10-18T03:27:37" hostname="localhost">
+  <testsuite name="com.agencia.atenas.CumplimientoCasoRoomTest" tests="5" failures="0" errors="0" skipped="0" time="0.736" timestamp="2026-10-18T03:27:37" hostname="localhost">
+    <properties>
+      <property name="device" value="emulator-5580" />
+    </properties>
+    <testcase name="fotosSeConservanCancelacionNoAgregaYUsuarioAjenoNoAccede" classname="com.agencia.atenas.CumplimientoCasoRoomTest" time="0.269" />
+    <testcase name="asignarNoSustituyeUnaGestionComercial" classname="com.agencia.atenas.CumplimientoCasoRoomTest" time="0.160" />
+    <testcase name="historialContactoNoCambiaAlCambiarContactoPrincipalYRespetaAsignacion" classname="com.agencia.atenas.CumplimientoCasoRoomTest" time="0.135" />
+    <testcase name="resultadoPersisteRelacionadoYFinalizaSoloUnaParticipacionConfirmada" classname="com.agencia.atenas.CumplimientoCasoRoomTest" time="0.138" />
+    <testcase name="organizacionConservaDatosComplementarios" classname="com.agencia.atenas.CumplimientoCasoRoomTest" time="0.034" />
+  </testsuite>
+  <testsuite name="com.agencia.atenas.ExampleInstrumentedTest" tests="1" failures="0" errors="0" skipped="0" time="0.004" timestamp="2026-10-18T03:27:37" hostname="localhost">
+    <properties>
+      <property name="device" value="emulator-5580" />
+    </properties>
+    <testcase name="useAppContext" classname="com.agencia.atenas.ExampleInstrumentedTest" time="0.004" />
+  </testsuite>
+  <testsuite name="com.agencia.atenas.NormalizacionRoomTest" tests="2" failures="0" errors="0" skipped="0" time="0.210" timestamp="2026-10-18T03:27:37" hostname="localhost">
+    <properties>
+      <property name="device" value="emulator-5580" />
+    </properties>
+    <testcase name="cuentasPersistenYElRolSeLeeDeLaTabla" classname="com.agencia.atenas.NormalizacionRoomTest" time="0.107" />
+    <testcase name="usaIdsAunqueLosNombresSeRepitanYAutorizaDesdeRoom" classname="com.agencia.atenas.NormalizacionRoomTest" time="0.103" />
+  </testsuite>
+  <testsuite name="com.agencia.atenas.RecordatoriosRoomTest" tests="3" failures="0" errors="0" skipped="0" time="0.313" timestamp="2026-10-18T03:27:37" hostname="localhost">
+    <properties>
+      <property name="device" value="emulator-5580" />
+    </properties>
+    <testcase name="noSePuedeResolverUnaTareaDeOtraOportunidad" classname="com.agencia.atenas.RecordatoriosRoomTest" time="0.075" />
+    <testcase name="lasTareasSiguenAlResponsableActualYSeOcultanAlFinalizar" classname="com.agencia.atenas.RecordatoriosRoomTest" time="0.135" />
+    <testcase name="resolverConservaHistorialYRechazaResolucionDuplicada" classname="com.agencia.atenas.RecordatoriosRoomTest" time="0.103" />
+  </testsuite>
+</testsuites>

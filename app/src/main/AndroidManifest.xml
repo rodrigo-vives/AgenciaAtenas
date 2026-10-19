@@ -11,6 +11,16 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.AgenciaAtenas">
+        <!-- La cámara externa recibe acceso temporal solo a evidencias, nunca a toda la base.
+             No usamos CAMERA: la captura la realiza la aplicación de cámara del dispositivo. -->
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="${applicationId}.evidencias"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/rutas_evidencias" />
+        </provider>
         <activity
             android:name=".MainActivity"
             android:exported="true"

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.agencia.atenas.AlertasEventoTest" tests="3" skipped="0" failures="0" errors="0" timestamp="2026-10-18T03:42:10.054Z" hostname="DAROM" time="0.057">
+  <properties/>
+  <testcase name="calculaDiasAlCruzarMesYAnio" classname="com.agencia.atenas.AlertasEventoTest" time="0.032"/>
+  <testcase name="omiteFechasInvalidasYEstadosTerminados" classname="com.agencia.atenas.AlertasEventoTest" time="0.009"/>
+  <testcase name="incluyeHoyYElSeptimoDiaPeroNoElOctavo" classname="com.agencia.atenas.AlertasEventoTest" time="0.003"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

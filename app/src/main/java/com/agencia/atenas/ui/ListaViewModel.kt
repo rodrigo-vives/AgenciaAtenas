@@ -4,18 +4,19 @@ import android.app.Application
 import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.viewModelScope
 import com.agencia.atenas.data.AppDatabase
-import com.agencia.atenas.data.GestionOportunidadEntity
 import com.agencia.atenas.utils.SesionActual
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.asStateFlow
 import kotlinx.coroutines.flow.update
+import kotlinx.coroutines.flow.catch
+import kotlinx.coroutines.CancellationException
 import kotlinx.coroutines.launch
 
 class ListaViewModel(application: Application) : AndroidViewModel(application) {
 
-    // DAO para acceder a la base de datos.
-    private val dao = AppDatabase.obtenerBaseDeDatos(application).oportunidadDao()
+    // CAMBIO: Repository aplica el alcance por usuario también al listado.
+    private val repository = com.agencia.atenas.data.OportunidadRepository(AppDatabase.obtenerBaseDeDatos(application))
 
     // Estado interno (solo el ViewModel lo modifica).
     private val _uiState = MutableStateFlow(ListaUiState())
@@ -33,7 +34,10 @@ class ListaViewModel(application: Application) : AndroidViewModel(application) {
         viewModelScope.launch {
             _uiState.update { it.copy(cargando = true) }
 
-            dao.obtenerTodas().collect { lista ->
+            repository.observar().catch { error ->
+                if (error is CancellationException) throw error
+                _uiState.update { it.copy(cargando = false, mensajeError = "No se pudo cargar el listado") }
+            }.collect { lista ->
                 _uiState.update {
                     it.copy(
                         gestiones = lista,
@@ -58,31 +62,38 @@ class ListaViewModel(application: Application) : AndroidViewModel(application) {
         }
     }
 
-    // Limpia el filtro por estado (vuelve a mostrar todas).
-    fun limpiarFiltroEstado() {
-        _uiState.update { estadoActual ->
-            estadoActual.copy(filtroEstado = "")
-        }
+    // Cada evento publica una copia; la lista se deriva del nuevo estado en Compose.
+    // Los filtros no se guardan como columnas: son preferencias de consulta de esta pantalla.
+    fun cambiarPrioridad(valor: String) {
+        _uiState.update { it.copy(filtroPrioridad = valor) }
     }
 
-    // Filtra la lista según búsqueda y estado.
-    // Se usa en la UI para mostrar solo lo que corresponde.
-    fun obtenerGestionesFiltradas(): List<GestionOportunidadEntity> {
-        val estado = _uiState.value
-
-        return estado.gestiones.filter { gestion ->
-            val coincideBusqueda = estado.textoBusqueda.isBlank() ||
-                    gestion.nombreOportunidad.contains(estado.textoBusqueda, ignoreCase = true)
-
-            val coincideEstado = estado.filtroEstado.isBlank() ||
-                    gestion.estado.name == estado.filtroEstado
-
-            coincideBusqueda && coincideEstado
-        }
+    fun cambiarTipo(valor: String) {
+        _uiState.update { it.copy(filtroTipo = valor) }
     }
 
-    // Cierra la sesión actual.
-    fun cerrarSesion() {
-        SesionActual.usuario = ""
+    fun cambiarUbicacion(valor: String) {
+        _uiState.update { it.copy(filtroUbicacion = valor) }
     }
+
+    fun cambiarOrganizacion(id: Int?) {
+        _uiState.update { it.copy(filtroOrganizacionId = id) }
+    }
+
+    fun cambiarResponsable(id: Int?) {
+        if (SesionActual.esSupervisor) _uiState.update { it.copy(filtroResponsableId = id) }
+    }
+    fun cambiarDesde(valor: String) {
+        _uiState.update { it.copy(fechaDesde = valor) }
+    }
+
+    fun cambiarHasta(valor: String) {
+        _uiState.update { it.copy(fechaHasta = valor) }
+    }
+
+    fun limpiarFiltros() {
+        _uiState.update { it.sinFiltros() }
+    }
+
+
 }

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.agencia.atenas.RecordatoriosTest" tests="5" skipped="0" failures="0" errors="0" timestamp="2026-10-18T03:42:10.199Z" hostname="DAROM" time="0.013">
+  <properties/>
+  <testcase name="proximaAccionYFechaDebenEstarJuntas" classname="com.agencia.atenas.RecordatoriosTest" time="0.005"/>
+  <testcase name="separaAyerHoyYFechasFuturas" classname="com.agencia.atenas.RecordatoriosTest" time="0.003"/>
+  <testcase name="comparaCorrectamenteAlCambiarDeAnio" classname="com.agencia.atenas.RecordatoriosTest" time="0.001"/>
+  <testcase name="noAvisaDeTareasResueltasNiFechasInvalidas" classname="com.agencia.atenas.RecordatoriosTest" time="0.001"/>
+  <testcase name="resolverExigeResultadoYPermiteProgramarOtraAccion" classname="com.agencia.atenas.RecordatoriosTest" time="0.001"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

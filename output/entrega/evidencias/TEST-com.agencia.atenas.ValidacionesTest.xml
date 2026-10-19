@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.agencia.atenas.ValidacionesTest" tests="6" skipped="0" failures="0" errors="0" timestamp="2026-10-18T03:42:10.228Z" hostname="DAROM" time="0.032">
+  <properties/>
+  <testcase name="fechasRealesYFormatoVisible" classname="com.agencia.atenas.ValidacionesTest" time="0.001"/>
+  <testcase name="permiteDatosDesconocidosSinInventarlos" classname="com.agencia.atenas.ValidacionesTest" time="0.009"/>
+  <testcase name="horarioSinFechaFinalSeValidaComoMismoDia" classname="com.agencia.atenas.ValidacionesTest" time="0.002"/>
+  <testcase name="ejecutivoNoConfirmaNiDescarta" classname="com.agencia.atenas.ValidacionesTest" time="0.015"/>
+  <testcase name="rechazaRangosYNumerosInvalidos" classname="com.agencia.atenas.ValidacionesTest" time="0.002"/>
+  <testcase name="cruzarMedianocheRequiereUnaFechaPosterior" classname="com.agencia.atenas.ValidacionesTest" time="0.001"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

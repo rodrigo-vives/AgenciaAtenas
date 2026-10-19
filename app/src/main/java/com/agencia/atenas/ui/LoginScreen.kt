@@ -1,5 +1,11 @@
 package com.agencia.atenas.ui
 
+import androidx.compose.foundation.rememberScrollState
+import androidx.compose.foundation.Image
+import androidx.compose.foundation.shape.RoundedCornerShape
+import androidx.compose.foundation.layout.size
+import androidx.compose.foundation.verticalScroll
+import androidx.compose.foundation.layout.imePadding
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxSize
@@ -14,6 +20,9 @@ import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.draw.clip
+import androidx.compose.ui.res.painterResource
+import com.agencia.atenas.R
 import androidx.compose.ui.text.input.PasswordVisualTransformation
 import androidx.compose.ui.unit.dp
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
@@ -37,11 +46,27 @@ fun LoginScreen(
             modifier = Modifier
                 .fillMaxSize()
                 .padding(innerPadding)
+                // El teclado y el tamaño de letra no deben ocultar el botón Ingresar.
+                .imePadding()
+                .verticalScroll(rememberScrollState())
                 .padding(24.dp),
             // Centra los elementos vertical y horizontalmente.
             verticalArrangement = Arrangement.Center,
             horizontalAlignment = Alignment.CenterHorizontally
         ) {
+
+            // La figura completa identifica a la agencia en el ingreso. Aquí hay más
+            // espacio que en el ícono del teléfono, por eso se puede mostrar el vestido.
+            // size limita su tamaño; clip redondea el fondo sin deformar la imagen.
+            // La columna conserva su desplazamiento para usar el formulario con teclado.
+            Image(
+                painter = painterResource(R.drawable.atenea_ingreso),
+                contentDescription = "Atenea con un maletín, símbolo de Agencia Atenas",
+                modifier = Modifier
+                    .padding(bottom = 16.dp)
+                    .size(144.dp)
+                    .clip(RoundedCornerShape(24.dp))
+            )
 
             // Título de la pantalla, usando la tipografía del tema.
             Text(
@@ -56,6 +81,7 @@ fun LoginScreen(
             // supportingText: mensaje debajo del campo, visible solo si hay error.
             OutlinedTextField(
                 value = uiState.usuario,
+                enabled = !uiState.cargando,
                 onValueChange = { viewModel.cambiarUsuario(it) },
                 label = { Text("Usuario") },
                 isError = uiState.errorUsuario,
@@ -74,6 +100,7 @@ fun LoginScreen(
             // El resto es igual al campo de usuario.
             OutlinedTextField(
                 value = uiState.password,
+                enabled = !uiState.cargando,
                 onValueChange = { viewModel.cambiarPassword(it) },
                 label = { Text("Contraseña") },
                 visualTransformation = PasswordVisualTransformation(),
@@ -104,11 +131,12 @@ fun LoginScreen(
             // Si el login es correcto, el callback navega a la siguiente pantalla.
             Button(
                 onClick = { viewModel.iniciarSesion(onLoginExitoso) },
+                enabled = !uiState.cargando,
                 modifier = Modifier
                     .fillMaxWidth()
                     .padding(top = 24.dp)
             ) {
-                Text("Ingresar")
+                Text(if (uiState.cargando) "Ingresando…" else "Ingresar")
             }
         }
     }

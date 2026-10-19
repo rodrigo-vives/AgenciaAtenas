@@ -1,0 +1,696 @@
+PÁGINA 1
+Duoc UC · ESCUELA DE INFORMÁTICA Y TELECOMUNICACIONES · CITT
+FORMATO DE CASO PARA DOCENTES Y
+ESTUDIANTES
+Desarrollo de Aplicaciones Móviles · DSY1105
+1. Identificación del caso
+Antecedente Información para el caso
+Título breve del desafío Gestión móvil de oportunidades y activaciones corporativas
+Organización Agencia de marketing directo y gestión de beneficios corporativos
+Marketing directo, gestión de convenios corporativos, beneficios y
+Rubro o ámbito
+activaciones comerciales.
+Sede / coordinador(a) CITT Puente Alto / Pablo Saldaña
+Asignatura DSY1105 · Desarrollo de Aplicaciones Móviles
+Fecha de entrega al docente 02/09/2026
+2. Caso que se presentará a los equipos
+2.1 Contexto de la organización.
+Agencia es una empresa dedicada a la gestión y comercialización de convenios y beneficios, principalmente
+relacionados con clínicas dentales, servicios automotrices y servicios veterinarios. Cuenta con
+Formato de caso · DSY1105 | 1
+
+PÁGINA 2
+Duoc UC · ESCUELA DE INFORMÁTICA Y TELECOMUNICACIONES · CITT
+aproximadamente 140 colaboradores distribuidos a lo largo de Chile y también mantiene presencia en
+Argentina y Colombia.
+La organización posee experiencia en la captación de clientes mediante puntos de venta y activaciones
+realizadas en espacios de alta afluencia. Como parte de su desarrollo comercial, busca fortalecer una nueva
+línea enfocada en convenios corporativos dirigidos a empresas, municipalidades e instituciones.
+Esta línea comercial busca acercar los servicios y beneficios de la agencia a trabajadores, colaboradores,
+familias y asistentes a:
+• Eventos corporativos.
+• Ferias empresariales.
+• Actividades municipales.
+• Jornadas de beneficios.
+• Ferias institucionales.
+• Actividades organizacionales con alta concentración de público.
+• Otras instancias compatibles con el público objetivo de la agencia.
+El desafío consiste en mejorar la forma en que la organización identifica, organiza, prioriza y gestiona
+oportunidades de activación corporativa, utilizando información que permita detectar eventos relevantes
+con mayor anticipación.
+2.2 Situación actual.
+Actualmente, el proceso de identificación y gestión de eventos corporativos se desarrolla principalmente de
+manera manual y depende de la búsqueda directa realizada por el equipo comercial.
+El proceso actual contempla las siguientes etapas:
+1. Búsqueda de oportunidades.
+2. Identificación de eventos o actividades.
+3. Investigación de la organización responsable.
+4. Búsqueda del contacto correspondiente.
+5. Obtención de un medio de contacto.
+6. Envío de una propuesta o presentación.
+7. Espera de respuesta y condiciones.
+8. Evaluación interna de la oportunidad.
+9. Coordinación de la posible activación.
+Para identificar oportunidades, el equipo revisa redes sociales, sitios web y otros medios digitales. Una vez
+detectado un evento de interés, busca a una persona perteneciente a las áreas de eventos, activaciones,
+marketing, recursos humanos, bienestar o beneficios de la organización responsable.
+Posteriormente, el equipo establece contacto y presenta la posibilidad de que la agencia participe en la
+actividad. La organización responsable debe informar las fechas, los espacios disponibles, los requisitos, los
+costos y las demás condiciones necesarias para concretar la activación.
+Formato de caso · DSY1105 | 2
+
+PÁGINA 3
+Duoc UC · ESCUELA DE INFORMÁTICA Y TELECOMUNICACIONES · CITT
+La información obtenida puede quedar distribuida entre sitios web, redes sociales, correos electrónicos,
+mensajes y registros personales de los integrantes del equipo. Esto dificulta mantener una visión centralizada
+de las oportunidades identificadas, los contactos realizados y las gestiones pendientes.
+2.3 Necesidad o problema.
+La organización presenta dificultades para identificar con suficiente anticipación los eventos y actividades
+corporativas en los que podría participar.
+En varias ocasiones, las oportunidades se detectan cuando falta poco tiempo para la realización del evento.
+Esto reduce el margen disponible para:
+• Investigar la actividad.
+• Evaluar la afinidad con el público objetivo.
+• Encontrar a la persona responsable.
+• Presentar una propuesta.
+• Esperar una respuesta.
+• Revisar las condiciones de participación.
+• Coordinar la activación.
+• Preparar los recursos necesarios.
+También existe dificultad para encontrar al contacto adecuado dentro de cada organización. Esta búsqueda
+puede requerir revisar distintas fuentes y depender de referencias o contactos indirectos, retrasando el inicio
+de la gestión comercial.
+La falta de información centralizada dificulta conocer:
+• Qué oportunidades fueron detectadas.
+• Qué eventos tienen mayor potencial.
+• Qué organizaciones fueron contactadas.
+• Quién está a cargo de cada gestión.
+• Qué propuestas fueron enviadas.
+• Qué oportunidades esperan respuesta.
+• Qué eventos fueron confirmados.
+• Qué oportunidades fueron descartadas.
+• Qué actividades requieren seguimiento.
+• Qué oportunidades se perdieron por falta de anticipación.
+Esta situación ocurre de manera recurrente y puede provocar la pérdida de oportunidades comerciales
+relevantes. Por lo tanto, existe la necesidad de contar con una herramienta que facilite la identificación,
+organización, priorización y seguimiento de eventos y activaciones corporativas.
+2.4 Mejora esperada.
+Se espera disponer de una aplicación móvil que permita al equipo comercial centralizar y gestionar las
+oportunidades de participación en eventos corporativos.
+Formato de caso · DSY1105 | 3
+
+PÁGINA 4
+Duoc UC · ESCUELA DE INFORMÁTICA Y TELECOMUNICACIONES · CITT
+La propuesta deberá facilitar:
+• El registro de eventos y oportunidades.
+• La clasificación de los eventos.
+• El registro de fechas y ubicaciones.
+• La identificación de organizaciones responsables.
+• El registro de contactos corporativos ficticios.
+• La evaluación del público esperado.
+• La priorización de oportunidades.
+• El seguimiento de contactos realizados.
+• El registro de propuestas enviadas.
+• La actualización del estado de cada gestión.
+• La incorporación de observaciones.
+• La consulta de actividades pendientes.
+• La generación de recordatorios.
+• La identificación de eventos próximos.
+• El registro del resultado de una activación.
+• La consulta del historial de oportunidades.
+La mejora deberá permitir que el equipo comercial detecte oportunidades con mayor anticipación y dedique
+menos tiempo a buscar información dispersa.
+Desde la perspectiva del negocio, se espera:
+• Aumentar la cantidad de oportunidades detectadas.
+• Incrementar la cantidad de eventos gestionados.
+• Mejorar la anticipación de las gestiones.
+• Reducir las oportunidades perdidas.
+• Aumentar las activaciones concretadas.
+• Generar nuevos contactos con organizaciones.
+• Aumentar las inscripciones derivadas de eventos.
+• Mejorar la conversión de oportunidades.
+• Fortalecer el canal de convenios corporativos.
+Formato de caso · DSY1105 | 4
+
+PÁGINA 5
+Duoc UC · ESCUELA DE INFORMÁTICA Y TELECOMUNICACIONES · CITT
+3. Información necesaria para desarrollar la propuesta
+3.1 Tareas o funciones de los perfiles usuarios.
+Perfil principal: ejecutivo o integrante del equipo comercial
+Este perfil será responsable de buscar, registrar y gestionar oportunidades de activación y convenios
+corporativos.
+Deberá poder:
+• Ingresar mediante una cuenta ficticia.
+• Registrar una nueva oportunidad.
+• Registrar los antecedentes de un evento.
+• Asociar el evento con una organización.
+• Registrar la fecha y horario.
+• Registrar la ubicación.
+• Indicar el tipo de evento.
+• Definir el público objetivo.
+• Registrar el público esperado.
+• Evaluar el potencial de la oportunidad.
+• Registrar contactos corporativos ficticios.
+• Indicar el área o cargo del contacto.
+• Registrar acciones de seguimiento.
+• Cambiar el estado de la oportunidad.
+• Registrar una propuesta enviada.
+• Incorporar condiciones de participación.
+• Ingresar costos referenciales ficticios.
+• Registrar observaciones.
+• Consultar oportunidades pendientes.
+• Consultar eventos próximos.
+• Recibir recordatorios internos.
+• Consultar el historial de gestiones.
+• Registrar el resultado de una activación.
+Perfil: responsable o supervisor comercial
+El anexo no define expresamente un perfil supervisor dentro de la aplicación. Sin embargo, para organizar el
+caso académico y aplicar control de acceso, puede considerarse un perfil responsable del equipo comercial.
+Este perfil podría:
+• Consultar todas las oportunidades registradas.
+• Revisar las gestiones realizadas por el equipo.
+Formato de caso · DSY1105 | 5
+
+PÁGINA 6
+Duoc UC · ESCUELA DE INFORMÁTICA Y TELECOMUNICACIONES · CITT
+• Asignar una oportunidad a un ejecutivo.
+• Modificar la prioridad de una oportunidad.
+• Validar o descartar oportunidades.
+• Consultar gestiones atrasadas.
+• Revisar propuestas enviadas.
+• Consultar indicadores generales.
+• Revisar resultados de activaciones.
+• Consultar el historial del equipo.
+Este perfil es una propuesta de adaptación académica, por lo que debe validarse con el socio formador antes
+de incorporarse como requisito obligatorio.
+Perfil: equipo de marketing o comunicaciones
+El área de marketing o comunicaciones apoya en la preparación de materiales, presentaciones y estrategias
+para las activaciones.
+Para el MVP, este perfil podría:
+• Consultar oportunidades confirmadas.
+• Revisar información general del evento.
+• Consultar fechas y condiciones.
+• Registrar material asociado.
+• Incorporar observaciones para la activación.
+• Consultar requerimientos de preparación.
+Este perfil puede quedar como funcionalidad complementaria. El perfil obligatorio del anexo corresponde
+principalmente al equipo comercial.
+Actores externos
+Los siguientes actores participan en el proceso, pero no necesariamente deben tener acceso a la aplicación:
+• Responsables de eventos o activaciones.
+• Áreas de Recursos Humanos.
+• Áreas de Bienestar.
+• Áreas de Beneficios.
+• Organizadores de ferias.
+• Empresas.
+• Municipalidades.
+• Instituciones.
+• Público objetivo.
+• Potenciales clientes.
+Para el MVP académico, estos actores pueden representarse mediante registros ficticios, sin implementar
+cuentas de acceso externas.
+Formato de caso · DSY1105 | 6
+
+PÁGINA 7
+Duoc UC · ESCUELA DE INFORMÁTICA Y TELECOMUNICACIONES · CITT
+3.2 Información necesaria para el proceso.
+Información de usuarios
+La aplicación podrá considerar:
+• Identificador ficticio.
+• Nombre ficticio.
+• Perfil.
+• Área.
+• Zona o sucursal.
+• Estado de la cuenta.
+• Oportunidades asignadas.
+• Fecha de creación.
+• Fecha de actualización.
+Información de las oportunidades
+Cada oportunidad deberá considerar:
+• Identificador.
+• Nombre de la oportunidad.
+• Tipo de oportunidad.
+• Descripción.
+• Fuente de información.
+• Fecha de detección.
+• Responsable interno.
+• Nivel de prioridad.
+• Potencial comercial estimado.
+• Estado de la gestión.
+• Fecha de última actualización.
+• Observaciones.
+Los tipos de oportunidad podrán incluir:
+• Evento corporativo.
+• Feria empresarial.
+• Actividad municipal.
+• Jornada de beneficios.
+• Feria institucional.
+• Actividad de trabajadores.
+• Activación comercial.
+• Otra instancia relevante.
+Formato de caso · DSY1105 | 7
+
+PÁGINA 8
+Duoc UC · ESCUELA DE INFORMÁTICA Y TELECOMUNICACIONES · CITT
+Información del evento
+Cada evento deberá considerar:
+• Nombre.
+• Tipo.
+• Descripción.
+• Fecha de inicio.
+• Fecha de término.
+• Horario.
+• Dirección o ubicación general.
+• Comuna.
+• Región.
+• Organización responsable.
+• Público esperado.
+• Público objetivo.
+• Cantidad estimada de asistentes.
+• Condiciones de participación.
+• Requisitos.
+• Costos referenciales ficticios.
+• Espacios disponibles.
+• Observaciones.
+Información de la organización
+Cada organización deberá considerar:
+• Identificador.
+• Nombre ficticio o autorizado.
+• Tipo de organización.
+• Rubro.
+• Comuna.
+• Región.
+• Sitio web ficticio o público.
+• Público asociado.
+• Observaciones.
+• Eventos relacionados.
+• Historial de gestiones.
+Los tipos de organización podrán incluir:
+• Empresa.
+Formato de caso · DSY1105 | 8
+
+PÁGINA 9
+Duoc UC · ESCUELA DE INFORMÁTICA Y TELECOMUNICACIONES · CITT
+• Municipalidad.
+• Institución pública.
+• Institución privada.
+• Organizador de eventos.
+• Centro comercial.
+• Asociación.
+• Otra entidad.
+Información de contactos
+Cada contacto de prueba podrá considerar:
+• Identificador.
+• Nombre ficticio.
+• Organización.
+• Cargo o función.
+• Área.
+• Correo ficticio.
+• Teléfono ficticio.
+• Medio de contacto preferente.
+• Estado del contacto.
+• Fecha del último contacto.
+• Observaciones.
+Las áreas de contacto podrán ser:
+• Eventos.
+• Activaciones.
+• Marketing.
+• Comunicaciones.
+• Recursos Humanos.
+• Bienestar.
+• Beneficios.
+• Administración.
+Todos los nombres, correos y teléfonos utilizados por los estudiantes deberán ser ficticios. Los datos reales
+de la contraparte del anexo no deben incorporarse en el caso entregado a los equipos.
+Información de seguimiento
+Cada acción de seguimiento deberá considerar:
+• Identificador.
+• Oportunidad relacionada.
+• Usuario responsable.
+Formato de caso · DSY1105 | 9
+
+PÁGINA 10
+Duoc UC · ESCUELA DE INFORMÁTICA Y TELECOMUNICACIONES · CITT
+• Tipo de acción.
+• Fecha y hora.
+• Resultado.
+• Próxima acción.
+• Fecha del próximo seguimiento.
+• Observaciones.
+Los tipos de acción podrán incluir:
+• Investigación inicial.
+• Búsqueda de contacto.
+• Primer contacto.
+• Envío de presentación.
+• Envío de propuesta.
+• Solicitud de antecedentes.
+• Reunión.
+• Llamada.
+• Seguimiento.
+• Recepción de respuesta.
+• Confirmación.
+• Cierre.
+Estados de la oportunidad
+El anexo identifica los siguientes estados principales:
+• Evento identificado.
+• Contacto pendiente.
+• Contacto realizado.
+• Propuesta enviada.
+• En espera de respuesta.
+• Participación confirmada.
+• Oportunidad descartada.
+Para mejorar la trazabilidad del MVP, también podrían incorporarse:
+• En evaluación.
+• Información incompleta.
+• Requiere seguimiento.
+• Activación realizada.
+• Activación cancelada.
+• Oportunidad cerrada.
+Formato de caso · DSY1105 | 10
+
+PÁGINA 11
+Duoc UC · ESCUELA DE INFORMÁTICA Y TELECOMUNICACIONES · CITT
+Información del resultado de la activación
+Para medir el resultado con información ficticia, se podrá registrar:
+• Fecha de realización.
+• Estado final.
+• Cantidad estimada de asistentes.
+• Cantidad de contactos generados.
+• Cantidad de personas interesadas.
+• Cantidad de inscripciones.
+• Observaciones del equipo.
+• Evaluación general.
+• Aprendizajes para futuras activaciones.
+Estos indicadores se infieren del resultado de negocio esperado, que busca aumentar contactos,
+inscripciones, conversiones y activaciones concretadas. Deben validarse antes de considerarlos obligatorios.
+Información de alertas y recordatorios
+La propuesta podrá gestionar:
+• Eventos próximos.
+• Oportunidades sin contacto.
+• Propuestas pendientes de envío.
+• Gestiones sin respuesta.
+• Seguimientos próximos.
+• Seguimientos atrasados.
+• Fechas límite de postulación.
+• Activaciones confirmadas.
+• Información incompleta.
+• Cambios de estado.
+3.3 Condiciones de uso de la aplicación móvil.
+La aplicación estará orientada principalmente al equipo comercial y podrá utilizarse tanto durante tareas de
+planificación como en actividades realizadas en terreno.
+La propuesta deberá considerar:
+• Uso desde teléfonos inteligentes.
+• Compatibilidad solicitada inicialmente con Android e iOS.
+• Conexión a internet para consultar y actualizar información.
+• Acceso parcial a información frente a conexiones inestables.
+• Consulta rápida de oportunidades.
+• Uso durante visitas a organizaciones.
+Formato de caso · DSY1105 | 11
+
+PÁGINA 12
+Duoc UC · ESCUELA DE INFORMÁTICA Y TELECOMUNICACIONES · CITT
+• Uso durante eventos o activaciones.
+• Navegación sencilla.
+• Textos legibles.
+• Botones claros.
+• Formularios comprensibles.
+• Mensajes de confirmación.
+• Filtros de búsqueda.
+• Visualización de oportunidades próximas.
+• Recordatorios y notificaciones internas.
+• Consulta de oportunidades según ubicación o zona geográfica.
+La ubicación podría utilizarse para identificar eventos cercanos o consultar oportunidades por zonas de
+interés, considerando que la organización tiene operaciones en diferentes lugares de Chile.
+Para el alcance académico:
+• La ubicación real puede reemplazarse por comunas, regiones o coordenadas ficticias.
+• No se deberá registrar el desplazamiento real de los usuarios.
+• No se deberá mantener seguimiento permanente del dispositivo.
+• Las notificaciones pueden implementarse como avisos internos.
+• Los permisos del dispositivo deberán probarse sin capturar datos personales reales.
+• La aplicación móvil desarrollada en la asignatura estará enfocada principalmente en Android, de
+acuerdo con las tecnologías indicadas por el programa.
+3.4 Conexión con otros sistemas o herramientas.
+Actualmente, Agencia Atenas no cuenta con un sistema interno específico que deba integrarse
+obligatoriamente con la propuesta.
+La búsqueda y gestión de oportunidades se realiza principalmente mediante:
+• Redes sociales.
+• Sitios web.
+• Correo electrónico.
+• Contactos directos.
+• Referencias.
+• Comunicaciones comerciales.
+Por lo tanto, el MVP podrá funcionar con una base de datos independiente que centralice:
+• Usuarios ficticios.
+• Organizaciones ficticias.
+• Eventos.
+• Oportunidades.
+Formato de caso · DSY1105 | 12
+
+PÁGINA 13
+Duoc UC · ESCUELA DE INFORMÁTICA Y TELECOMUNICACIONES · CITT
+• Contactos ficticios.
+• Acciones de seguimiento.
+• Estados.
+• Alertas.
+• Resultados de activaciones.
+No será obligatorio integrar el MVP con:
+• Sistemas internos de la organización.
+• Cuentas de correo reales.
+• Redes sociales reales.
+• Plataformas de terceros.
+• Sistemas de geolocalización productivos.
+• Bases de datos comerciales reales.
+• Servicios de mensajería reales.
+• Sistemas de gestión de clientes.
+• Credenciales institucionales.
+Una futura versión podría evaluar integraciones con calendarios, mapas, correo institucional, fuentes
+públicas de eventos o herramientas de gestión comercial. Sin embargo, esas integraciones no forman parte
+del alcance obligatorio definido en el anexo.
+4. Criterios para considerar útil la propuesta
+4.1 Resultados o señales de éxito.
+La propuesta será considerada útil si permite demostrar, mediante usuarios y datos ficticios, los siguientes
+resultados:
+1. El usuario puede registrar una oportunidad.
+2. La oportunidad puede asociarse con un evento.
+3. El evento puede relacionarse con una organización.
+4. Se puede registrar el tipo, fecha, horario y ubicación del evento.
+5. Se puede indicar el público esperado.
+6. Se puede evaluar la afinidad con el público objetivo.
+7. Se puede registrar cuándo fue detectada la oportunidad.
+8. Se puede establecer un nivel de prioridad.
+9. Se puede asignar un responsable interno.
+10. Se pueden registrar contactos corporativos ficticios.
+11. Se puede registrar el área o cargo del contacto.
+12. Se pueden registrar acciones de seguimiento.
+13. Se puede mantener el historial de contactos.
+Formato de caso · DSY1105 | 13
+
+PÁGINA 14
+Duoc UC · ESCUELA DE INFORMÁTICA Y TELECOMUNICACIONES · CITT
+14. Se puede registrar el envío de una propuesta.
+15. Se puede actualizar el estado de la oportunidad.
+16. Se pueden consultar oportunidades pendientes.
+17. Se pueden identificar oportunidades sin seguimiento.
+18. Se pueden consultar eventos próximos.
+19. Se pueden generar recordatorios internos.
+20. Se pueden identificar gestiones atrasadas.
+21. Se pueden filtrar oportunidades por fecha.
+22. Se pueden filtrar oportunidades por ubicación.
+23. Se pueden filtrar oportunidades por tipo.
+24. Se pueden filtrar oportunidades por organización.
+25. Se pueden filtrar oportunidades por estado.
+26. Se puede registrar la confirmación o descarte de una participación.
+27. Se puede consultar el historial completo de la oportunidad.
+28. Se puede registrar el resultado ficticio de una activación.
+29. La aplicación permite detectar oportunidades con mayor anticipación.
+30. La aplicación centraliza información previamente dispersa.
+31. La aplicación mejora la trazabilidad de la gestión comercial.
+32. La solución funciona exclusivamente con información ficticia, pública o autorizada.
+33. La aplicación no requiere integraciones productivas.
+34. La demostración no expone datos personales ni comerciales confidenciales.
+5. Restricciones que deben considerar los equipos
+5.1 Condiciones o límites del caso.
+Alcance académico
+• El resultado corresponde a un Producto Mínimo Viable.
+• No corresponde a una aplicación productiva definitiva.
+• No se contempla su publicación productiva.
+• Los equipos pueden plantear soluciones diferentes.
+• El socio formador aporta contexto y retroalimentación, pero no califica a los estudiantes.
+• Las exigencias curriculares serán definidas por el equipo académico.
+Datos y privacidad
+• Se utilizarán exclusivamente datos ficticios, sintéticos, agregados, públicos o anonimizados.
+Formato de caso · DSY1105 | 14
+
+PÁGINA 15
+Duoc UC · ESCUELA DE INFORMÁTICA Y TELECOMUNICACIONES · CITT
+• No se entregarán listados de personas reales.
+• No se utilizarán nombres reales en las pruebas.
+• No se utilizarán RUT.
+• No se utilizarán correos reales.
+• No se utilizarán teléfonos reales.
+• No se utilizarán domicilios.
+• No se utilizarán fotografías o voces identificables.
+• No se utilizarán datos financieros individuales.
+• No se utilizarán datos laborales individuales.
+• No se utilizarán datos de salud.
+• No se utilizarán datos biométricos.
+• No se incluirán credenciales, llaves, tokens o respaldos.
+• No se entregará acceso a sistemas internos.
+Información comercial
+• La información comercial entregada a los estudiantes deberá estar depurada.
+• No se utilizarán estrategias comerciales confidenciales.
+• No se compartirán valores contractuales reales.
+• No se registrarán convenios reales sin autorización.
+• No se compartirán bases reales de clientes.
+• No se compartirán contactos corporativos reales.
+• No se expondrán condiciones comerciales sensibles.
+• Los costos, tasas de conversión y resultados utilizados en pruebas deberán ser ficticios.
+Uso de ubicación
+• No se realizará seguimiento permanente de usuarios.
+• El uso de ubicación deberá ser opcional.
+• Las pruebas podrán realizarse con ubicaciones ficticias.
+• La aplicación no deberá almacenar recorridos personales.
+• No se utilizarán domicilios particulares.
+• Se recomienda trabajar con comuna, región o ubicación general del evento.
+Notificaciones y comunicaciones
+• Las notificaciones podrán implementarse como avisos internos.
+• No será obligatorio enviar correos reales.
+Formato de caso · DSY1105 | 15
+
+PÁGINA 16
+Duoc UC · ESCUELA DE INFORMÁTICA Y TELECOMUNICACIONES · CITT
+• No será obligatorio enviar mensajes externos.
+• No se contactará a organizaciones reales desde el MVP.
+• Las propuestas comerciales utilizadas en las pruebas deberán ser ficticias.
+• El sistema no enviará mensajes automáticos a terceros sin intervención y autorización del usuario.
+Integraciones
+• No se requiere integración con sistemas internos.
+• No se usarán credenciales institucionales.
+• No se accederá automáticamente a redes sociales.
+• No se extraerán datos personales de sitios web.
+• No se realizará recolección automatizada de información restringida.
+• No se conectará el MVP con bases reales de clientes.
+• No se utilizarán APIs que requieran cuentas productivas de la organización.
+Tecnologías asociadas a la asignatura
+El anexo relaciona el MVP con las siguientes tecnologías del programa de DSY1105:
+• Kotlin.
+• Android Studio.
+• Jetpack Compose.
+• Material Design 3.
+• Arquitectura MVVM.
+• Room o SQLite.
+• Recursos nativos del dispositivo.
+• API REST.
+• Microservicios con Spring Boot.
+• Retrofit.
+• Pruebas unitarias.
+• Git y GitHub.
+• Trello.
+• APK firmado en modo release.
+Estas tecnologías deberán ajustarse a las exigencias oficiales del Examen Transversal y al avance efectivo de
+los estudiantes.
+Formato de caso · DSY1105 | 16
+
+PÁGINA 17
+Duoc UC · ESCUELA DE INFORMÁTICA Y TELECOMUNICACIONES · CITT
+6. Alcance recomendado para el Examen Transversal
+Aunque el formato oficial pasa del punto 5 al punto 7, recomiendo utilizar esta sección para precisar el
+alcance mínimo y evitar que los equipos intenten implementar integraciones o procesos que exceden el
+semestre.
+Funcionalidades mínimas del MVP
+Módulo de autenticación
+• Inicio de sesión con cuenta ficticia.
+• Identificación del usuario.
+• Control de sesión.
+• Visualización del perfil.
+Módulo de oportunidades
+• Crear una oportunidad.
+• Modificar una oportunidad.
+• Consultar oportunidades.
+• Asignar responsable.
+• Definir prioridad.
+• Actualizar estado.
+• Registrar observaciones.
+Módulo de eventos
+• Registrar un evento.
+• Indicar tipo de evento.
+• Registrar fecha y horario.
+• Registrar comuna y región.
+• Asociar una organización.
+• Indicar público esperado.
+• Registrar condiciones de participación.
+Módulo de organizaciones y contactos
+• Registrar organizaciones ficticias.
+• Registrar contactos ficticios.
+• Asociar contactos con organizaciones.
+• Identificar área o cargo.
+• Consultar historial de contacto.
+Formato de caso · DSY1105 | 17
+
+PÁGINA 18
+Duoc UC · ESCUELA DE INFORMÁTICA Y TELECOMUNICACIONES · CITT
+Módulo de seguimiento
+• Registrar acciones realizadas.
+• Registrar fecha de contacto.
+• Registrar resultado.
+• Programar la próxima acción.
+• Consultar gestiones pendientes.
+• Identificar seguimientos atrasados.
+Módulo de alertas
+• Mostrar eventos próximos.
+• Mostrar seguimientos pendientes.
+• Mostrar propuestas sin respuesta.
+• Mostrar oportunidades sin contacto.
+• Mostrar fechas importantes.
+Módulo de búsqueda y filtros
+• Buscar por nombre.
+• Filtrar por fecha.
+• Filtrar por estado.
+• Filtrar por tipo.
+• Filtrar por comuna o región.
+• Filtrar por prioridad.
+• Filtrar por responsable.
+Módulo de historial
+• Consultar acciones realizadas.
+• Consultar cambios de estado.
+• Consultar propuestas registradas.
+• Consultar respuestas.
+• Consultar resultado final.
+Funcionalidades recomendadas como complementarias
+• Mapa con ubicaciones ficticias.
+• Notificaciones locales.
+• Indicadores generales.
+• Funcionamiento parcial sin conexión.
+Formato de caso · DSY1105 | 18
+
+PÁGINA 19
+Duoc UC · ESCUELA DE INFORMÁTICA Y TELECOMUNICACIONES · CITT
+• Exportación de información.
+• Registro de resultados de activación.
+• Perfil supervisor.
+• Perfil de marketing.
+• Calendario de eventos.
+• Integración con fuentes externas de eventos.
+7. Material de apoyo que se entregará
+Registrar únicamente material necesario, depurado y autorizado para uso académico.
+Material Para qué se utilizará Revisión
+Base ficticia de eventos, Para probar el registro, clasificación, búsqueda,
+ferias, actividades priorización y seguimiento de oportunidades
+☐ Depurado
+municipales y jornadas de comerciales.
+beneficios.
+Base ficticia de
+Para probar la asociación entre eventos,
+organizaciones, áreas
+organizaciones y contactos, sin utilizar nombres, ☐ Depurado
+responsables y contactos
+correos o teléfonos reales.
+corporativos.
+Ejemplos ficticios de
+Para probar el seguimiento comercial, los cambios de
+gestiones, propuestas,
+estado, los recordatorios, el historial y el registro de ☐ Depurado
+respuestas, estados y
+resultados.
+resultados de activaciones.
+Formato de caso · DSY1105 | 19

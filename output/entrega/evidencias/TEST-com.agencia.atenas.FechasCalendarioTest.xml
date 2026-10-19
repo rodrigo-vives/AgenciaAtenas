@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.agencia.atenas.FechasCalendarioTest" tests="6" skipped="0" failures="0" errors="0" timestamp="2026-10-18T03:42:10.118Z" hostname="DAROM" time="0.036">
+  <properties/>
+  <testcase name="rechazaFechasImposiblesYFormatosDistintos" classname="com.agencia.atenas.FechasCalendarioTest" time="0.021"/>
+  <testcase name="diaCompletoSinTerminoIncluyeUnDia" classname="com.agencia.atenas.FechasCalendarioTest" time="0.004"/>
+  <testcase name="permiteUnEventoQueCruzaMedianocheConFechaFinal" classname="com.agencia.atenas.FechasCalendarioTest" time="0.004"/>
+  <testcase name="respetaHorasYLaZonaHoraria" classname="com.agencia.atenas.FechasCalendarioTest" time="0.001"/>
+  <testcase name="rechazaTerminoAnteriorOHorasIncorrectas" classname="com.agencia.atenas.FechasCalendarioTest" time="0.004"/>
+  <testcase name="terminoDeDiaCompletoEsExclusivo" classname="com.agencia.atenas.FechasCalendarioTest" time="0.001"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

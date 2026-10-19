@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.agencia.atenas.ValidarResultadoTest" tests="4" skipped="0" failures="0" errors="0" timestamp="2026-10-18T03:42:10.272Z" hostname="DAROM" time="0.007">
+  <properties/>
+  <testcase name="exigeResultadoYLimitaTextoSinBorrarBorrador" classname="com.agencia.atenas.ValidarResultadoTest" time="0.002"/>
+  <testcase name="rechazaFechaFuturaOImposible" classname="com.agencia.atenas.ValidarResultadoTest" time="0.001"/>
+  <testcase name="rechazaIndicadoresNegativosDecimalesODesbordados" classname="com.agencia.atenas.ValidarResultadoTest" time="0.001"/>
+  <testcase name="permiteIndicadoresDesconocidos" classname="com.agencia.atenas.ValidarResultadoTest" time="0.001"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

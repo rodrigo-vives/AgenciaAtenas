@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.agencia.atenas.ListaUiStateTest" tests="7" skipped="0" failures="0" errors="0" timestamp="2026-10-18T03:42:10.161Z" hostname="DAROM" time="0.036">
+  <properties/>
+  <testcase name="ubicacionBuscaComunaRegionYRecintoSinDistinguirMayusculas" classname="com.agencia.atenas.ListaUiStateTest" time="0.014"/>
+  <testcase name="limpiarConservaDatosYRecuperaTodasLasOportunidades" classname="com.agencia.atenas.ListaUiStateTest" time="0.002"/>
+  <testcase name="combinaTodosLosFiltrosSinConfundirNombresIguales" classname="com.agencia.atenas.ListaUiStateTest" time="0.006"/>
+  <testcase name="rangoIncluyeExtremosYAdmiteUnSoloLimite" classname="com.agencia.atenas.ListaUiStateTest" time="0.007"/>
+  <testcase name="combinaNombreYEstadoYSuLimpiezaRecuperaRegistros" classname="com.agencia.atenas.ListaUiStateTest" time="0.0"/>
+  <testcase name="fechasInvalidasNoProducenResultadosEnganosos" classname="com.agencia.atenas.ListaUiStateTest" time="0.003"/>
+  <testcase name="laInstantaneaNuevaIncluyeLosDatosQueLleganDespues" classname="com.agencia.atenas.ListaUiStateTest" time="0.003"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
