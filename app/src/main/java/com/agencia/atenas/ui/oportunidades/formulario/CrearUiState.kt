@@ -1,4 +1,4 @@
-package com.agencia.atenas.ui
+package com.agencia.atenas.ui.oportunidades.formulario
 
 /**
  * Representa lo que se ve en Crear: valores ingresados, errores y progreso del guardado.

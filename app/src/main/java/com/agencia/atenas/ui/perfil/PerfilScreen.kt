@@ -5,7 +5,7 @@ import androidx.compose.runtime.*
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
 import androidx.lifecycle.viewmodel.compose.viewModel
 import com.agencia.atenas.data.Roles
-import com.agencia.atenas.ui.Dato
+import com.agencia.atenas.ui.oportunidades.detalle.Dato
 import com.agencia.atenas.ui.componentes.Pagina
 
 /** Consulta de perfil pedida por el caso; no incorpora administración de contraseñas. */

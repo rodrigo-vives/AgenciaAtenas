@@ -1,4 +1,4 @@
-package com.agencia.atenas.ui
+package com.agencia.atenas.ui.oportunidades.resultado
 
 /** Borrador: los números son texto para permitir valores desconocidos sin inventar ceros. */
 data class ResultadoUiState(

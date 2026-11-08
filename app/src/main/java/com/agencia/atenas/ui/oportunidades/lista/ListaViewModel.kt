@@ -1,4 +1,4 @@
-package com.agencia.atenas.ui
+package com.agencia.atenas.ui.oportunidades.lista
 
 import android.app.Application
 import androidx.lifecycle.AndroidViewModel

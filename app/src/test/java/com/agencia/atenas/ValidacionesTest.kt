@@ -1,7 +1,7 @@
 package com.agencia.atenas
 
 import com.agencia.atenas.utils.*
-import com.agencia.atenas.ui.CrearUiState
+import com.agencia.atenas.ui.oportunidades.formulario.CrearUiState
 import com.agencia.atenas.data.*
 import org.junit.Assert.*
 import org.junit.Test

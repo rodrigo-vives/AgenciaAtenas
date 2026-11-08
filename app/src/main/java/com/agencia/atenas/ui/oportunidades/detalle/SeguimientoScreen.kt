@@ -1,4 +1,4 @@
-package com.agencia.atenas.ui
+package com.agencia.atenas.ui.oportunidades.detalle
 
 import androidx.compose.material3.*
 import androidx.compose.runtime.*

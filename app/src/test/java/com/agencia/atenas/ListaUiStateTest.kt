@@ -1,7 +1,7 @@
 package com.agencia.atenas
 
 import com.agencia.atenas.data.*
-import com.agencia.atenas.ui.ListaUiState
+import com.agencia.atenas.ui.oportunidades.lista.ListaUiState
 import org.junit.Assert.*
 import org.junit.Test
 

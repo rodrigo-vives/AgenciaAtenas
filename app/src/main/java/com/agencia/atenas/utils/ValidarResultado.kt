@@ -1,6 +1,6 @@
 package com.agencia.atenas.utils
 
-import com.agencia.atenas.ui.ResultadoUiState
+import com.agencia.atenas.ui.oportunidades.resultado.ResultadoUiState
 
 /** Resultado real de la demostración ficticia: no se registra como ocurrido en el futuro. */
 fun validarResultado(estado: ResultadoUiState, hoy: String = Fechas.hoy()): Map<String, String> {

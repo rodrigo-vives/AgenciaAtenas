@@ -225,7 +225,7 @@ class OportunidadRepository(private val db: AppDatabase) {
         }
     }
 
-    suspend fun guardarResultado(id: Int, estado: com.agencia.atenas.ui.ResultadoUiState) = db.withTransaction {
+    suspend fun guardarResultado(id: Int, estado: com.agencia.atenas.ui.oportunidades.resultado.ResultadoUiState) = db.withTransaction {
         val usuario = usuarioActual()
         val oportunidad = comprobarAcceso(id, usuario)
         require(oportunidad.estado in listOf(EstadoOportunidad.CONFIRMADO,

@@ -1,4 +1,4 @@
-package com.agencia.atenas.ui
+package com.agencia.atenas.ui.oportunidades.detalle
 
 import androidx.compose.material3.*
 import androidx.compose.runtime.*
@@ -11,6 +11,7 @@ import com.agencia.atenas.utils.*
 import com.agencia.atenas.ui.componentes.MensajeOperacion
 import com.agencia.atenas.ui.componentes.Pagina
 import com.agencia.atenas.ui.componentes.Selector
+import com.agencia.atenas.ui.RecursosOportunidad
 
 /**
  * Consulta una oportunidad ya guardada y muestra todos sus datos. Desde aquí se abre

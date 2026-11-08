@@ -1,8 +1,8 @@
 package com.agencia.atenas.utils
 
-import com.agencia.atenas.ui.CrearUiState
-import com.agencia.atenas.ui.camposFormulario
-import com.agencia.atenas.ui.valor
+import com.agencia.atenas.ui.oportunidades.formulario.CrearUiState
+import com.agencia.atenas.ui.oportunidades.formulario.camposFormulario
+import com.agencia.atenas.ui.oportunidades.formulario.valor
 
 /*
  * Por qué esta función devuelve un mapa y no solamente true/false:

@@ -1,4 +1,4 @@
-package com.agencia.atenas.ui
+package com.agencia.atenas.ui.oportunidades.formulario
 
 /*
  * Este archivo es una solución para no escribir muchas veces el mismo OutlinedTextField.
