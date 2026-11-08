@@ -7,7 +7,7 @@ import androidx.room.RoomDatabase
 import androidx.room.TypeConverters
 
 /**
- * Esquema 5 para instalación limpia, elegido por el equipo sin migraciones.:3
+ * Esquema 5 para instalación limpia, elegido por el equipo sin migraciones.:33
  * Añade datos de organización, contacto histórico y resultados de activación.
  * No borra ni convierte automáticamente una base anterior. Probar en otro emulador
  * conserva intactos los datos de la instalación antigua.
