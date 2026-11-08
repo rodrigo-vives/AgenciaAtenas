@@ -13,3 +13,9 @@
 .externalNativeBuild
 .cxx
 local.properties
+
+# Archivos generados localmente; no son código ni evidencia de colaboración.
+/app/build/
+/.kotlin/
+/tmp/
+/output/entrega/
