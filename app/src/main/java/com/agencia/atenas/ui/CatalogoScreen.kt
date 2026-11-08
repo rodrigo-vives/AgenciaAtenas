@@ -7,6 +7,10 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.runtime.*
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
 import androidx.lifecycle.viewmodel.compose.viewModel
+import com.agencia.atenas.ui.componentes.Campo
+import com.agencia.atenas.ui.componentes.MensajeOperacion
+import com.agencia.atenas.ui.componentes.Pagina
+import com.agencia.atenas.ui.componentes.Selector
 
 /**
  * Formulario y listado de organizaciones o contactos. esContacto decide cuál de los dos

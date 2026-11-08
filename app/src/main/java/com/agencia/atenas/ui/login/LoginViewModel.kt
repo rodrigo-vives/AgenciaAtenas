@@ -1,4 +1,4 @@
-package com.agencia.atenas.ui
+package com.agencia.atenas.ui.login
 
 import android.app.Application
 import android.util.Log

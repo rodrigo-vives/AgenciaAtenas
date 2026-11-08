@@ -46,6 +46,7 @@ import com.agencia.atenas.utils.cargarVistaPrevia
 import java.io.File
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.withContext
+import com.agencia.atenas.ui.componentes.MensajeOperacion
 
 /** Bloque del detalle: solo recibe una oportunidad ya consultada y autorizada. */
 @Composable

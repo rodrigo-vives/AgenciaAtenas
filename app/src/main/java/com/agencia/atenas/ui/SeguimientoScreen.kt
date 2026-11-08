@@ -7,6 +7,9 @@ import androidx.lifecycle.compose.LifecycleEventEffect
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
 import androidx.lifecycle.viewmodel.compose.viewModel
 import com.agencia.atenas.utils.Fechas
+import com.agencia.atenas.ui.componentes.Campo
+import com.agencia.atenas.ui.componentes.MensajeOperacion
+import com.agencia.atenas.ui.componentes.Pagina
 
 /**
  * Permite registrar una gestión libre o completar una acción programada con resultado.

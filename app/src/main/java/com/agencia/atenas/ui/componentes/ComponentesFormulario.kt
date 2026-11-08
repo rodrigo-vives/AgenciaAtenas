@@ -1,4 +1,4 @@
-package com.agencia.atenas.ui
+package com.agencia.atenas.ui.componentes
 
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.rememberScrollState

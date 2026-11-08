@@ -1,4 +1,4 @@
-package com.agencia.atenas.ui
+package com.agencia.atenas.ui.navegacion
 
 import androidx.compose.runtime.Composable
 import androidx.navigation.NavType
@@ -7,6 +7,17 @@ import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
 import androidx.navigation.navArgument
 import com.agencia.atenas.utils.SesionActual
+import com.agencia.atenas.ui.CatalogoScreen
+import com.agencia.atenas.ui.CrearScreen
+import com.agencia.atenas.ui.DetalleScreen
+import com.agencia.atenas.ui.HistorialCatalogoScreen
+import com.agencia.atenas.ui.InicioScreen
+import com.agencia.atenas.ui.ListaScreen
+import com.agencia.atenas.ui.ResultadoScreen
+import com.agencia.atenas.ui.SeguimientoScreen
+import com.agencia.atenas.ui.SupervisorScreen
+import com.agencia.atenas.ui.login.LoginScreen
+import com.agencia.atenas.ui.perfil.PerfilScreen
 
 /**
  * Mapa de destinos, como en el PPT 03. Cada Screen recibe callbacks (funciones),

@@ -1,0 +1,263 @@
+diff --git a/app/src/main/java/com/agencia/atenas/MainActivity.kt b/app/src/main/java/com/agencia/atenas/MainActivity.kt
+--- a/app/src/main/java/com/agencia/atenas/MainActivity.kt
++++ b/app/src/main/java/com/agencia/atenas/MainActivity.kt
+@@ -4,7 +4,7 @@
+ import androidx.activity.ComponentActivity
+ import androidx.activity.compose.setContent
+ import androidx.activity.enableEdgeToEdge
+-import com.agencia.atenas.ui.Navegacion
++import com.agencia.atenas.ui.navegacion.Navegacion
+ import com.agencia.atenas.ui.theme.AgenciaAtenasTheme
+ 
+ /**
+diff --git a/app/src/main/java/com/agencia/atenas/ui/CatalogoScreen.kt b/app/src/main/java/com/agencia/atenas/ui/CatalogoScreen.kt
+--- a/app/src/main/java/com/agencia/atenas/ui/CatalogoScreen.kt
++++ b/app/src/main/java/com/agencia/atenas/ui/CatalogoScreen.kt
+@@ -7,6 +7,10 @@
+ import androidx.compose.runtime.*
+ import androidx.lifecycle.compose.collectAsStateWithLifecycle
+ import androidx.lifecycle.viewmodel.compose.viewModel
++import com.agencia.atenas.ui.componentes.Campo
++import com.agencia.atenas.ui.componentes.MensajeOperacion
++import com.agencia.atenas.ui.componentes.Pagina
++import com.agencia.atenas.ui.componentes.Selector
+ 
+ /**
+  * Formulario y listado de organizaciones o contactos. esContacto decide cuál de los dos
+diff --git a/app/src/main/java/com/agencia/atenas/ui/ComponentesFormulario.kt b/app/src/main/java/com/agencia/atenas/ui/componentes/ComponentesFormulario.kt
+rename from app/src/main/java/com/agencia/atenas/ui/ComponentesFormulario.kt
+rename to app/src/main/java/com/agencia/atenas/ui/componentes/ComponentesFormulario.kt
+--- a/app/src/main/java/com/agencia/atenas/ui/ComponentesFormulario.kt
++++ b/app/src/main/java/com/agencia/atenas/ui/componentes/ComponentesFormulario.kt
+@@ -1,4 +1,4 @@
+-package com.agencia.atenas.ui
++package com.agencia.atenas.ui.componentes
+ 
+ import androidx.compose.foundation.layout.*
+ import androidx.compose.foundation.rememberScrollState
+diff --git a/app/src/main/java/com/agencia/atenas/ui/CrearScreen.kt b/app/src/main/java/com/agencia/atenas/ui/CrearScreen.kt
+--- a/app/src/main/java/com/agencia/atenas/ui/CrearScreen.kt
++++ b/app/src/main/java/com/agencia/atenas/ui/CrearScreen.kt
+@@ -9,6 +9,9 @@
+ import androidx.compose.ui.unit.dp
+ import androidx.lifecycle.compose.collectAsStateWithLifecycle
+ import androidx.lifecycle.viewmodel.compose.viewModel
++import com.agencia.atenas.ui.componentes.Campo
++import com.agencia.atenas.ui.componentes.Pagina
++import com.agencia.atenas.ui.componentes.Selector
+ 
+ /*
+  * Recorrido al escribir:
+diff --git a/app/src/main/java/com/agencia/atenas/ui/DetalleScreen.kt b/app/src/main/java/com/agencia/atenas/ui/DetalleScreen.kt
+--- a/app/src/main/java/com/agencia/atenas/ui/DetalleScreen.kt
++++ b/app/src/main/java/com/agencia/atenas/ui/DetalleScreen.kt
+@@ -8,6 +8,9 @@
+ import androidx.lifecycle.viewmodel.compose.viewModel
+ import com.agencia.atenas.data.*
+ import com.agencia.atenas.utils.*
++import com.agencia.atenas.ui.componentes.MensajeOperacion
++import com.agencia.atenas.ui.componentes.Pagina
++import com.agencia.atenas.ui.componentes.Selector
+ 
+ /**
+  * Consulta una oportunidad ya guardada y muestra todos sus datos. Desde aquí se abre
+diff --git a/app/src/main/java/com/agencia/atenas/ui/HistorialCatalogoScreen.kt b/app/src/main/java/com/agencia/atenas/ui/HistorialCatalogoScreen.kt
+--- a/app/src/main/java/com/agencia/atenas/ui/HistorialCatalogoScreen.kt
++++ b/app/src/main/java/com/agencia/atenas/ui/HistorialCatalogoScreen.kt
+@@ -5,6 +5,8 @@
+ import androidx.lifecycle.compose.collectAsStateWithLifecycle
+ import androidx.lifecycle.viewmodel.compose.viewModel
+ import com.agencia.atenas.utils.Fechas
++import com.agencia.atenas.ui.componentes.MensajeOperacion
++import com.agencia.atenas.ui.componentes.Pagina
+ 
+ /**
+  * Reutiliza la misma presentación para contacto u organización. El booleano decide
+diff --git a/app/src/main/java/com/agencia/atenas/ui/InicioScreen.kt b/app/src/main/java/com/agencia/atenas/ui/InicioScreen.kt
+--- a/app/src/main/java/com/agencia/atenas/ui/InicioScreen.kt
++++ b/app/src/main/java/com/agencia/atenas/ui/InicioScreen.kt
+@@ -12,6 +12,8 @@
+ import com.agencia.atenas.data.EstadoOportunidad
+ import com.agencia.atenas.data.RecordatorioSeguimiento
+ import com.agencia.atenas.utils.*
++import com.agencia.atenas.ui.componentes.MensajeOperacion
++import com.agencia.atenas.ui.componentes.Pagina
+ 
+ /**
+  * Recordatorios internos: se muestran al abrir Inicio, sin notificaciones del sistema
+diff --git a/app/src/main/java/com/agencia/atenas/ui/ListaScreen.kt b/app/src/main/java/com/agencia/atenas/ui/ListaScreen.kt
+--- a/app/src/main/java/com/agencia/atenas/ui/ListaScreen.kt
++++ b/app/src/main/java/com/agencia/atenas/ui/ListaScreen.kt
+@@ -16,6 +16,8 @@
+ import com.agencia.atenas.data.OportunidadDetalle
+ import com.agencia.atenas.ui.theme.*
+ import com.agencia.atenas.utils.*
++import com.agencia.atenas.ui.componentes.Campo
++import com.agencia.atenas.ui.componentes.Selector
+ 
+ @Composable
+ fun ListaScreen(onIrACrear: () -> Unit, onIrADetalle: (Int) -> Unit,
+diff --git a/app/src/main/java/com/agencia/atenas/ui/LoginScreen.kt b/app/src/main/java/com/agencia/atenas/ui/login/LoginScreen.kt
+rename from app/src/main/java/com/agencia/atenas/ui/LoginScreen.kt
+rename to app/src/main/java/com/agencia/atenas/ui/login/LoginScreen.kt
+--- a/app/src/main/java/com/agencia/atenas/ui/LoginScreen.kt
++++ b/app/src/main/java/com/agencia/atenas/ui/login/LoginScreen.kt
+@@ -1,4 +1,4 @@
+-package com.agencia.atenas.ui
++package com.agencia.atenas.ui.login
+ 
+ import androidx.compose.foundation.rememberScrollState
+ import androidx.compose.foundation.Image
+diff --git a/app/src/main/java/com/agencia/atenas/ui/LoginUiState.kt b/app/src/main/java/com/agencia/atenas/ui/login/LoginUiState.kt
+rename from app/src/main/java/com/agencia/atenas/ui/LoginUiState.kt
+rename to app/src/main/java/com/agencia/atenas/ui/login/LoginUiState.kt
+--- a/app/src/main/java/com/agencia/atenas/ui/LoginUiState.kt
++++ b/app/src/main/java/com/agencia/atenas/ui/login/LoginUiState.kt
+@@ -1,4 +1,4 @@
+-package com.agencia.atenas.ui
++package com.agencia.atenas.ui.login
+ 
+ /**
+  * Estado de la pantalla de login.
+diff --git a/app/src/main/java/com/agencia/atenas/ui/LoginViewModel.kt b/app/src/main/java/com/agencia/atenas/ui/login/LoginViewModel.kt
+rename from app/src/main/java/com/agencia/atenas/ui/LoginViewModel.kt
+rename to app/src/main/java/com/agencia/atenas/ui/login/LoginViewModel.kt
+--- a/app/src/main/java/com/agencia/atenas/ui/LoginViewModel.kt
++++ b/app/src/main/java/com/agencia/atenas/ui/login/LoginViewModel.kt
+@@ -1,4 +1,4 @@
+-package com.agencia.atenas.ui
++package com.agencia.atenas.ui.login
+ 
+ import android.app.Application
+ import android.util.Log
+diff --git a/app/src/main/java/com/agencia/atenas/ui/MensajeOperacion.kt b/app/src/main/java/com/agencia/atenas/ui/componentes/MensajeOperacion.kt
+rename from app/src/main/java/com/agencia/atenas/ui/MensajeOperacion.kt
+rename to app/src/main/java/com/agencia/atenas/ui/componentes/MensajeOperacion.kt
+--- a/app/src/main/java/com/agencia/atenas/ui/MensajeOperacion.kt
++++ b/app/src/main/java/com/agencia/atenas/ui/componentes/MensajeOperacion.kt
+@@ -1,4 +1,4 @@
+-package com.agencia.atenas.ui
++package com.agencia.atenas.ui.componentes
+ 
+ import androidx.compose.foundation.layout.*
+ import androidx.compose.material3.*
+diff --git a/app/src/main/java/com/agencia/atenas/ui/Navegacion.kt b/app/src/main/java/com/agencia/atenas/ui/navegacion/Navegacion.kt
+rename from app/src/main/java/com/agencia/atenas/ui/Navegacion.kt
+rename to app/src/main/java/com/agencia/atenas/ui/navegacion/Navegacion.kt
+--- a/app/src/main/java/com/agencia/atenas/ui/Navegacion.kt
++++ b/app/src/main/java/com/agencia/atenas/ui/navegacion/Navegacion.kt
+@@ -1,4 +1,4 @@
+-package com.agencia.atenas.ui
++package com.agencia.atenas.ui.navegacion
+ 
+ import androidx.compose.runtime.Composable
+ import androidx.navigation.NavType
+@@ -7,6 +7,17 @@
+ import androidx.navigation.compose.rememberNavController
+ import androidx.navigation.navArgument
+ import com.agencia.atenas.utils.SesionActual
++import com.agencia.atenas.ui.CatalogoScreen
++import com.agencia.atenas.ui.CrearScreen
++import com.agencia.atenas.ui.DetalleScreen
++import com.agencia.atenas.ui.HistorialCatalogoScreen
++import com.agencia.atenas.ui.InicioScreen
++import com.agencia.atenas.ui.ListaScreen
++import com.agencia.atenas.ui.ResultadoScreen
++import com.agencia.atenas.ui.SeguimientoScreen
++import com.agencia.atenas.ui.SupervisorScreen
++import com.agencia.atenas.ui.login.LoginScreen
++import com.agencia.atenas.ui.perfil.PerfilScreen
+ 
+ /**
+  * Mapa de destinos, como en el PPT 03. Cada Screen recibe callbacks (funciones),
+diff --git a/app/src/main/java/com/agencia/atenas/ui/PerfilScreen.kt b/app/src/main/java/com/agencia/atenas/ui/perfil/PerfilScreen.kt
+rename from app/src/main/java/com/agencia/atenas/ui/PerfilScreen.kt
+rename to app/src/main/java/com/agencia/atenas/ui/perfil/PerfilScreen.kt
+--- a/app/src/main/java/com/agencia/atenas/ui/PerfilScreen.kt
++++ b/app/src/main/java/com/agencia/atenas/ui/perfil/PerfilScreen.kt
+@@ -1,10 +1,12 @@
+-package com.agencia.atenas.ui
++package com.agencia.atenas.ui.perfil
+ 
+ import androidx.compose.material3.*
+ import androidx.compose.runtime.*
+ import androidx.lifecycle.compose.collectAsStateWithLifecycle
+ import androidx.lifecycle.viewmodel.compose.viewModel
+ import com.agencia.atenas.data.Roles
++import com.agencia.atenas.ui.Dato
++import com.agencia.atenas.ui.componentes.Pagina
+ 
+ /** Consulta de perfil pedida por el caso; no incorpora administración de contraseñas. */
+ @Composable
+diff --git a/app/src/main/java/com/agencia/atenas/ui/PerfilUiState.kt b/app/src/main/java/com/agencia/atenas/ui/perfil/PerfilUiState.kt
+rename from app/src/main/java/com/agencia/atenas/ui/PerfilUiState.kt
+rename to app/src/main/java/com/agencia/atenas/ui/perfil/PerfilUiState.kt
+--- a/app/src/main/java/com/agencia/atenas/ui/PerfilUiState.kt
++++ b/app/src/main/java/com/agencia/atenas/ui/perfil/PerfilUiState.kt
+@@ -1,4 +1,4 @@
+-package com.agencia.atenas.ui
++package com.agencia.atenas.ui.perfil
+ 
+ import com.agencia.atenas.data.UsuarioEntity
+ 
+diff --git a/app/src/main/java/com/agencia/atenas/ui/PerfilViewModel.kt b/app/src/main/java/com/agencia/atenas/ui/perfil/PerfilViewModel.kt
+rename from app/src/main/java/com/agencia/atenas/ui/PerfilViewModel.kt
+rename to app/src/main/java/com/agencia/atenas/ui/perfil/PerfilViewModel.kt
+--- a/app/src/main/java/com/agencia/atenas/ui/PerfilViewModel.kt
++++ b/app/src/main/java/com/agencia/atenas/ui/perfil/PerfilViewModel.kt
+@@ -1,4 +1,4 @@
+-package com.agencia.atenas.ui
++package com.agencia.atenas.ui.perfil
+ 
+ import android.app.Application
+ import androidx.lifecycle.AndroidViewModel
+diff --git a/app/src/main/java/com/agencia/atenas/ui/RecursosOportunidad.kt b/app/src/main/java/com/agencia/atenas/ui/RecursosOportunidad.kt
+--- a/app/src/main/java/com/agencia/atenas/ui/RecursosOportunidad.kt
++++ b/app/src/main/java/com/agencia/atenas/ui/RecursosOportunidad.kt
+@@ -46,6 +46,7 @@
+ import java.io.File
+ import kotlinx.coroutines.Dispatchers
+ import kotlinx.coroutines.withContext
++import com.agencia.atenas.ui.componentes.MensajeOperacion
+ 
+ /** Bloque del detalle: solo recibe una oportunidad ya consultada y autorizada. */
+ @Composable
+diff --git a/app/src/main/java/com/agencia/atenas/ui/ResultadoScreen.kt b/app/src/main/java/com/agencia/atenas/ui/ResultadoScreen.kt
+--- a/app/src/main/java/com/agencia/atenas/ui/ResultadoScreen.kt
++++ b/app/src/main/java/com/agencia/atenas/ui/ResultadoScreen.kt
+@@ -4,6 +4,9 @@
+ import androidx.compose.runtime.*
+ import androidx.lifecycle.compose.collectAsStateWithLifecycle
+ import androidx.lifecycle.viewmodel.compose.viewModel
++import com.agencia.atenas.ui.componentes.Campo
++import com.agencia.atenas.ui.componentes.MensajeOperacion
++import com.agencia.atenas.ui.componentes.Pagina
+ 
+ /** Indicadores ficticios opcionales del caso, sin obligar a inventar cantidades. */
+ @Composable
+diff --git a/app/src/main/java/com/agencia/atenas/ui/SeguimientoScreen.kt b/app/src/main/java/com/agencia/atenas/ui/SeguimientoScreen.kt
+--- a/app/src/main/java/com/agencia/atenas/ui/SeguimientoScreen.kt
++++ b/app/src/main/java/com/agencia/atenas/ui/SeguimientoScreen.kt
+@@ -7,6 +7,9 @@
+ import androidx.lifecycle.compose.collectAsStateWithLifecycle
+ import androidx.lifecycle.viewmodel.compose.viewModel
+ import com.agencia.atenas.utils.Fechas
++import com.agencia.atenas.ui.componentes.Campo
++import com.agencia.atenas.ui.componentes.MensajeOperacion
++import com.agencia.atenas.ui.componentes.Pagina
+ 
+ /**
+  * Permite registrar una gestión libre o completar una acción programada con resultado.
+diff --git a/app/src/main/java/com/agencia/atenas/ui/SupervisorScreen.kt b/app/src/main/java/com/agencia/atenas/ui/SupervisorScreen.kt
+--- a/app/src/main/java/com/agencia/atenas/ui/SupervisorScreen.kt
++++ b/app/src/main/java/com/agencia/atenas/ui/SupervisorScreen.kt
+@@ -8,6 +8,9 @@
+ import androidx.lifecycle.viewmodel.compose.viewModel
+ import com.agencia.atenas.data.*
+ import com.agencia.atenas.utils.*
++import com.agencia.atenas.ui.componentes.MensajeOperacion
++import com.agencia.atenas.ui.componentes.Pagina
++import com.agencia.atenas.ui.componentes.Selector
+ 
+ /**
+  * Lista global y selección del ejecutivo responsable. No permite entrar con rol ejecutivo.

@@ -8,6 +8,9 @@ import androidx.lifecycle.Lifecycle
 import androidx.lifecycle.viewmodel.compose.viewModel
 import com.agencia.atenas.data.*
 import com.agencia.atenas.utils.*
+import com.agencia.atenas.ui.componentes.MensajeOperacion
+import com.agencia.atenas.ui.componentes.Pagina
+import com.agencia.atenas.ui.componentes.Selector
 
 /**
  * Consulta una oportunidad ya guardada y muestra todos sus datos. Desde aquí se abre

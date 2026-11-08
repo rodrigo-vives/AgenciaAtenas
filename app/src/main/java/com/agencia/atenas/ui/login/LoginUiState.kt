@@ -1,4 +1,4 @@
-package com.agencia.atenas.ui
+package com.agencia.atenas.ui.login
 
 /**
  * Estado de la pantalla de login.

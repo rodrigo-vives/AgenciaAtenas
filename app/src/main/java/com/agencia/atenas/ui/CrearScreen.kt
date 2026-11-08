@@ -9,6 +9,9 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
 import androidx.lifecycle.viewmodel.compose.viewModel
+import com.agencia.atenas.ui.componentes.Campo
+import com.agencia.atenas.ui.componentes.Pagina
+import com.agencia.atenas.ui.componentes.Selector
 
 /*
  * Recorrido al escribir:

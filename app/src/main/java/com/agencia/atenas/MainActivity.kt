@@ -4,7 +4,7 @@ import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.activity.enableEdgeToEdge
-import com.agencia.atenas.ui.Navegacion
+import com.agencia.atenas.ui.navegacion.Navegacion
 import com.agencia.atenas.ui.theme.AgenciaAtenasTheme
 
 /**

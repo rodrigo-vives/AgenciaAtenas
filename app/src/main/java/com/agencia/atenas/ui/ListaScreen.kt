@@ -16,6 +16,8 @@ import com.agencia.atenas.data.EstadoOportunidad
 import com.agencia.atenas.data.OportunidadDetalle
 import com.agencia.atenas.ui.theme.*
 import com.agencia.atenas.utils.*
+import com.agencia.atenas.ui.componentes.Campo
+import com.agencia.atenas.ui.componentes.Selector
 
 @Composable
 fun ListaScreen(onIrACrear: () -> Unit, onIrADetalle: (Int) -> Unit,

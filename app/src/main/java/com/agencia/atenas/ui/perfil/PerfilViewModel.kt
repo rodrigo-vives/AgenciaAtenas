@@ -1,4 +1,4 @@
-package com.agencia.atenas.ui
+package com.agencia.atenas.ui.perfil
 
 import android.app.Application
 import androidx.lifecycle.AndroidViewModel

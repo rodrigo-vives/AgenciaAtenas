@@ -5,6 +5,8 @@ import androidx.compose.runtime.*
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
 import androidx.lifecycle.viewmodel.compose.viewModel
 import com.agencia.atenas.utils.Fechas
+import com.agencia.atenas.ui.componentes.MensajeOperacion
+import com.agencia.atenas.ui.componentes.Pagina
 
 /**
  * Reutiliza la misma presentación para contacto u organización. El booleano decide

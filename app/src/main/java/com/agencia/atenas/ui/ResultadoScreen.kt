@@ -4,6 +4,9 @@ import androidx.compose.material3.*
 import androidx.compose.runtime.*
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
 import androidx.lifecycle.viewmodel.compose.viewModel
+import com.agencia.atenas.ui.componentes.Campo
+import com.agencia.atenas.ui.componentes.MensajeOperacion
+import com.agencia.atenas.ui.componentes.Pagina
 
 /** Indicadores ficticios opcionales del caso, sin obligar a inventar cantidades. */
 @Composable

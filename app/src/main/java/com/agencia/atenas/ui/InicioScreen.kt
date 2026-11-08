@@ -12,6 +12,8 @@ import androidx.lifecycle.viewmodel.compose.viewModel
 import com.agencia.atenas.data.EstadoOportunidad
 import com.agencia.atenas.data.RecordatorioSeguimiento
 import com.agencia.atenas.utils.*
+import com.agencia.atenas.ui.componentes.MensajeOperacion
+import com.agencia.atenas.ui.componentes.Pagina
 
 /**
  * Recordatorios internos: se muestran al abrir Inicio, sin notificaciones del sistema
