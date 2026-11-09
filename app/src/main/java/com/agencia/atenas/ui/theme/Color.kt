@@ -56,6 +56,16 @@ val BotonIngresar = ColoresBoton(fondo = AcentoIngreso, texto = SuperficieIngres
 // Acentos de perfil y acciones sobre el encabezado oscuro.
 val FondoAcentoSuave = Color(0xFFF0E7FF)
 val TextoAcentoSuave = Color(0xFF5422A6)
+val FondoAvisoInicio = Color(0xFFFFF3DA)
+val TextoAvisoInicio = Color(0xFF805000)
+val FondoGestionAtrasada = Color(0xFFFFF4F3)
+val BordeGestionAtrasada = Color(0xFFF17D82)
+val FondoIconoGestionAtrasada = Color(0xFFFFDFE0)
+val IconoGestionAtrasada = Color(0xFFB72D3B)
+val FondoInfoInicio = Color(0xFFE8F0FF)
+val TextoInfoInicio = Color(0xFF174A9C)
+val FondoContactosInicio = Color(0xFFE5F4F2)
+val TextoContactosInicio = Color(0xFF006567)
 val BotonVolverEncabezado = ColoresBoton(texto = FondoIngreso)
 val BotonCerrarSesion = ColoresBoton(
     fondo = Color(0xFFFFDAD8),
