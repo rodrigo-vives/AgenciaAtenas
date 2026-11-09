@@ -3,6 +3,8 @@ package com.agencia.atenas.ui.theme
 import android.os.Build
 import androidx.compose.foundation.isSystemInDarkTheme
 import androidx.compose.material3.MaterialTheme
+import androidx.compose.material3.ButtonColors
+import androidx.compose.material3.ButtonDefaults
 import androidx.compose.material3.darkColorScheme
 import androidx.compose.material3.dynamicDarkColorScheme
 import androidx.compose.material3.dynamicLightColorScheme
@@ -22,6 +24,34 @@ private val LightColorScheme = lightColorScheme(
     tertiary = Pink40
 
 
+)
+
+private val PaletaIngreso = lightColorScheme(
+    primary = MoradoAccion,
+    onPrimary = SuperficieIngreso,
+    background = FondoIngreso,
+    onBackground = AzulMarca,
+    surface = SuperficieIngreso,
+    onSurface = AzulMarca,
+    onSurfaceVariant = TextoSecundarioIngreso,
+    outline = BordeIngreso,
+    outlineVariant = BordeTarjetaIngreso,
+    inverseSurface = AzulMarca,
+    inverseOnSurface = FondoIngreso
+)
+
+// El ingreso conserva los colores de marca sin cambiar el tema del resto de la app.
+@Composable
+fun TemaIngreso(content: @Composable () -> Unit) {
+    MaterialTheme(colorScheme = PaletaIngreso, typography = Typography, content = content)
+}
+
+// Colores de «Editar oportunidad» y «Seguimiento e historial».
+// Cambia el fondo y el texto aquí para personalizar solo estos dos botones.
+@Composable
+fun coloresBotonesDetalle(): ButtonColors = ButtonDefaults.buttonColors(
+    containerColor = MaterialTheme.colorScheme.primary,
+    contentColor = MaterialTheme.colorScheme.onPrimary
 )
 
 @Composable

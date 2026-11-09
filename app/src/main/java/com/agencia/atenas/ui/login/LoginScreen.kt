@@ -1,18 +1,22 @@
 package com.agencia.atenas.ui.login
 
-import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.Image
-import androidx.compose.foundation.shape.RoundedCornerShape
-import androidx.compose.foundation.layout.size
-import androidx.compose.foundation.verticalScroll
-import androidx.compose.foundation.layout.imePadding
+import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
+import androidx.compose.foundation.layout.heightIn
+import androidx.compose.foundation.layout.imePadding
 import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.layout.size
+import androidx.compose.foundation.layout.widthIn
+import androidx.compose.foundation.rememberScrollState
+import androidx.compose.foundation.text.KeyboardOptions
+import androidx.compose.foundation.verticalScroll
 import androidx.compose.material3.Button
 import androidx.compose.material3.MaterialTheme
+import androidx.compose.material3.OutlinedCard
 import androidx.compose.material3.OutlinedTextField
 import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Text
@@ -22,121 +26,138 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.res.painterResource
-import com.agencia.atenas.R
+import androidx.compose.ui.text.font.FontWeight
+import androidx.compose.ui.text.input.KeyboardType
 import androidx.compose.ui.text.input.PasswordVisualTransformation
+import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
 import androidx.lifecycle.viewmodel.compose.viewModel
+import com.agencia.atenas.R
+import com.agencia.atenas.ui.theme.TemaIngreso
 
 @Composable
 fun LoginScreen(
     onLoginExitoso: () -> Unit,
     viewModel: LoginViewModel = viewModel()
 ) {
+    val estado by viewModel.uiState.collectAsStateWithLifecycle()
 
-    // Observa el StateFlow del ViewModel y lo convierte en State de Compose.
-    // Cada cambio en el estado provoca una recomposición de la pantalla.
-    val uiState by viewModel.uiState.collectAsStateWithLifecycle()
-
-    Scaffold { innerPadding ->
-        Column(
-            // fillMaxSize: ocupa toda la pantalla.
-            // padding(innerPadding): respeta las barras del sistema (status bar, nav bar).
-            // padding(24.dp): margen interno para que el contenido no toque los bordes.
-            modifier = Modifier
-                .fillMaxSize()
-                .padding(innerPadding)
-                // El teclado y el tamaño de letra no deben ocultar el botón Ingresar.
-                .imePadding()
-                .verticalScroll(rememberScrollState())
-                .padding(24.dp),
-            // Centra los elementos vertical y horizontalmente.
-            verticalArrangement = Arrangement.Center,
-            horizontalAlignment = Alignment.CenterHorizontally
-        ) {
-
-            // La figura completa identifica a la agencia en el ingreso. Aquí hay más
-            // espacio que en el ícono del teléfono, por eso se puede mostrar el vestido.
-            // size limita su tamaño; clip redondea el fondo sin deformar la imagen.
-            // La columna conserva su desplazamiento para usar el formulario con teclado.
-            Image(
-                painter = painterResource(R.drawable.atenea_ingreso),
-                contentDescription = "Atenea con un maletín, símbolo de Agencia Atenas",
+    TemaIngreso {
+        Scaffold(containerColor = MaterialTheme.colorScheme.background) { innerPadding ->
+            // Todo el contenido se desplaza para alcanzar el botón con el teclado abierto.
+            Column(
                 modifier = Modifier
-                    .padding(bottom = 16.dp)
-                    .size(144.dp)
-                    .clip(RoundedCornerShape(24.dp))
-            )
-
-            // Título de la pantalla, usando la tipografía del tema.
-            Text(
-                text = "Agencia Atenas",
-                style = MaterialTheme.typography.headlineMedium
-            )
-
-            // Campo de usuario.
-            // value: lo que se muestra (viene del estado del ViewModel).
-            // onValueChange: actualiza el ViewModel cuando el usuario escribe.
-            // isError: pinta el campo en rojo si hay error.
-            // supportingText: mensaje debajo del campo, visible solo si hay error.
-            OutlinedTextField(
-                value = uiState.usuario,
-                enabled = !uiState.cargando,
-                onValueChange = { viewModel.cambiarUsuario(it) },
-                label = { Text("Usuario") },
-                isError = uiState.errorUsuario,
-                supportingText = {
-                    if (uiState.errorUsuario) {
-                        Text("El usuario es obligatorio")
-                    }
-                },
-                modifier = Modifier
-                    .fillMaxWidth()
-                    .padding(top = 24.dp)
-            )
-
-            // Campo de contraseña.
-            // PasswordVisualTransformation: oculta el texto (muestra puntos).
-            // El resto es igual al campo de usuario.
-            OutlinedTextField(
-                value = uiState.password,
-                enabled = !uiState.cargando,
-                onValueChange = { viewModel.cambiarPassword(it) },
-                label = { Text("Contraseña") },
-                visualTransformation = PasswordVisualTransformation(),
-                isError = uiState.errorPassword,
-                supportingText = {
-                    if (uiState.errorPassword) {
-                        Text("La contraseña es obligatoria")
-                    }
-                },
-                modifier = Modifier
-                    .fillMaxWidth()
-                    .padding(top = 8.dp)
-            )
-
-            // Mensaje de error general (credenciales incorrectas).
-            // Solo se muestra si el ViewModel lo estableció.
-            // Usa el color de error del tema para mantener consistencia visual.
-            if (uiState.mensajeError.isNotEmpty()) {
-                Text(
-                    text = uiState.mensajeError,
-                    color = MaterialTheme.colorScheme.error,
-                    modifier = Modifier.padding(top = 8.dp)
+                    .fillMaxSize()
+                    .padding(innerPadding)
+                    .imePadding()
+                    .verticalScroll(rememberScrollState()),
+                horizontalAlignment = Alignment.CenterHorizontally
+            ) {
+                EncabezadoIngreso()
+                FormularioIngreso(
+                    estado = estado,
+                    onUsuario = viewModel::cambiarUsuario,
+                    onPassword = viewModel::cambiarPassword,
+                    onIngresar = { viewModel.iniciarSesion(onLoginExitoso) }
                 )
             }
+        }
+    }
+}
 
-            // Botón de ingreso.
-            // Al pulsar, llama a iniciarSesion del ViewModel y le pasa el callback.
-            // Si el login es correcto, el callback navega a la siguiente pantalla.
+@Composable
+private fun EncabezadoIngreso() {
+    val colores = MaterialTheme.colorScheme
+    Column(
+        modifier = Modifier
+            .fillMaxWidth()
+            .background(colores.inverseSurface)
+            .padding(horizontal = 24.dp, vertical = 26.dp),
+        horizontalAlignment = Alignment.CenterHorizontally,
+        verticalArrangement = Arrangement.spacedBy(8.dp)
+    ) {
+        // Reutiliza la ilustración de Atenea que ya forma parte del proyecto.
+        Image(
+            painter = painterResource(R.drawable.atenea_ingreso),
+            contentDescription = null,
+            modifier = Modifier.size(108.dp).clip(MaterialTheme.shapes.medium)
+        )
+        Text(
+            text = "Agencia Atenas",
+            style = MaterialTheme.typography.headlineMedium,
+            fontWeight = FontWeight.Bold,
+            textAlign = TextAlign.Center,
+            color = colores.inverseOnSurface
+        )
+        Text(
+            text = "Gestión de oportunidades",
+            style = MaterialTheme.typography.bodyLarge,
+            textAlign = TextAlign.Center,
+            color = colores.inverseOnSurface
+        )
+    }
+}
+
+@Composable
+private fun FormularioIngreso(
+    estado: LoginUiState,
+    onUsuario: (String) -> Unit,
+    onPassword: (String) -> Unit,
+    onIngresar: () -> Unit
+) {
+    OutlinedCard(
+        modifier = Modifier
+            .padding(20.dp)
+            .widthIn(max = 440.dp)
+            .fillMaxWidth(),
+        shape = MaterialTheme.shapes.large
+    ) {
+        Column(
+            modifier = Modifier.padding(20.dp),
+            verticalArrangement = Arrangement.spacedBy(14.dp)
+        ) {
+            Text(
+                text = "Iniciar sesión",
+                style = MaterialTheme.typography.headlineSmall,
+                fontWeight = FontWeight.Bold
+            )
+            OutlinedTextField(
+                value = estado.usuario,
+                onValueChange = onUsuario,
+                label = { Text("Usuario") },
+                enabled = !estado.cargando,
+                singleLine = true,
+                isError = estado.errorUsuario,
+                supportingText = if (estado.errorUsuario) {
+                    { Text("El usuario es obligatorio") }
+                } else null,
+                modifier = Modifier.fillMaxWidth()
+            )
+            OutlinedTextField(
+                value = estado.password,
+                onValueChange = onPassword,
+                label = { Text("Contraseña") },
+                enabled = !estado.cargando,
+                singleLine = true,
+                isError = estado.errorPassword,
+                visualTransformation = PasswordVisualTransformation(),
+                keyboardOptions = KeyboardOptions(keyboardType = KeyboardType.Password),
+                supportingText = if (estado.errorPassword) {
+                    { Text("La contraseña es obligatoria") }
+                } else null,
+                modifier = Modifier.fillMaxWidth()
+            )
+            if (estado.mensajeError.isNotEmpty()) {
+                Text(estado.mensajeError, color = MaterialTheme.colorScheme.error)
+            }
             Button(
-                onClick = { viewModel.iniciarSesion(onLoginExitoso) },
-                enabled = !uiState.cargando,
-                modifier = Modifier
-                    .fillMaxWidth()
-                    .padding(top = 24.dp)
+                onClick = onIngresar,
+                enabled = !estado.cargando,
+                shape = MaterialTheme.shapes.medium,
+                modifier = Modifier.fillMaxWidth().heightIn(min = 48.dp)
             ) {
-                Text(if (uiState.cargando) "Ingresando…" else "Ingresar")
+                Text(if (estado.cargando) "Ingresando…" else "Ingresar")
             }
         }
     }

@@ -10,6 +10,7 @@ import com.agencia.atenas.ui.componentes.MensajeOperacion
 import com.agencia.atenas.ui.componentes.Pagina
 import com.agencia.atenas.ui.componentes.Selector
 import com.agencia.atenas.ui.evidencias.RecursosOportunidad
+import com.agencia.atenas.ui.theme.coloresBotonesDetalle
 import com.agencia.atenas.data.oportunidades.EstadoOportunidad
 import com.agencia.atenas.data.oportunidades.estadosPermitidos
 import com.agencia.atenas.utils.validacion.Fechas
@@ -44,11 +45,13 @@ fun DetalleScreen(id: Int,
             Text(item.nombreOportunidad,
                 style = MaterialTheme.typography.titleMedium)
             Text("Estado: ${item.estado.etiqueta}")
+            val coloresAcciones = coloresBotonesDetalle()
             Button(onClick = onEditar,
+                colors = coloresAcciones,
                 enabled = !estadoFormulario.ocupado) {
                 Text("Editar oportunidad")
             }
-            Button(onClick = onSeguimiento) {
+            Button(onClick = onSeguimiento, colors = coloresAcciones) {
                 Text("Seguimiento e historial")
             }
             if (item.estado in listOf(EstadoOportunidad.CONFIRMADO, EstadoOportunidad.ACTIVACION_REALIZADA, EstadoOportunidad.CERRADO)) {

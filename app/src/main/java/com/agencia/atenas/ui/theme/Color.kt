@@ -2,6 +2,15 @@ package com.agencia.atenas.ui.theme
 
 import androidx.compose.ui.graphics.Color
 
+// Identidad visual del ingreso. La paleta general se configura por separado.
+val AzulMarca = Color(0xFF0F172A)
+val FondoIngreso = Color(0xFFF8FAFC)
+val SuperficieIngreso = Color(0xFFFFFFFF)
+val MoradoAccion = Color(0xFF7C3AED)
+val TextoSecundarioIngreso = Color(0xFF475569)
+val BordeIngreso = Color(0xFF64748B)
+val BordeTarjetaIngreso = Color(0xFFCBD5E1)
+
 val Purple80 = Color(0xFFD0BCFF)
 val PurpleGrey80 = Color(0xFFCCC2DC)
 val Pink80 = Color(0xFFEFB8C8)
