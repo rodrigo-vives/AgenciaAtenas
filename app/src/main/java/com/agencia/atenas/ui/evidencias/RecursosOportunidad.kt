@@ -41,8 +41,8 @@ import androidx.lifecycle.compose.LifecycleEventEffect
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
 import androidx.lifecycle.viewmodel.compose.viewModel
 import com.agencia.atenas.data.oportunidades.OportunidadDetalle
-import com.agencia.atenas.utils.intervaloCalendario
-import com.agencia.atenas.utils.cargarVistaPrevia
+import com.agencia.atenas.utils.fechas.intervaloCalendario
+import com.agencia.atenas.utils.imagenes.cargarVistaPrevia
 import java.io.File
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.withContext

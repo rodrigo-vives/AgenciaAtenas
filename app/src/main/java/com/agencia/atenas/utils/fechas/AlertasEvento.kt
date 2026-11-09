@@ -1,9 +1,10 @@
-package com.agencia.atenas.utils
+package com.agencia.atenas.utils.fechas
 
 import com.agencia.atenas.data.oportunidades.EstadoOportunidad
 import java.text.SimpleDateFormat
 import java.util.Locale
 import java.util.TimeZone
+import com.agencia.atenas.utils.validacion.Fechas
 
 /**
  * Devuelve los días restantes cuando corresponde avisar; null significa que no hay alerta.

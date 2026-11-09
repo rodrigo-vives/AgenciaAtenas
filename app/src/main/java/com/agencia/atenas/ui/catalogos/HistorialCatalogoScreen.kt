@@ -4,7 +4,7 @@ import androidx.compose.material3.*
 import androidx.compose.runtime.*
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
 import androidx.lifecycle.viewmodel.compose.viewModel
-import com.agencia.atenas.utils.Fechas
+import com.agencia.atenas.utils.validacion.Fechas
 import com.agencia.atenas.ui.componentes.MensajeOperacion
 import com.agencia.atenas.ui.componentes.Pagina
 import com.agencia.atenas.ui.oportunidades.detalle.Dato

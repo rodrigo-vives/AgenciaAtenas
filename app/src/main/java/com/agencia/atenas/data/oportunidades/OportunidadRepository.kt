@@ -1,7 +1,7 @@
 package com.agencia.atenas.data.oportunidades
 
 import androidx.room.withTransaction
-import com.agencia.atenas.utils.Fechas
+import com.agencia.atenas.utils.validacion.Fechas
 import com.agencia.atenas.utils.SesionActual
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.combine
@@ -166,7 +166,7 @@ class OportunidadRepository(private val db: AppDatabase) {
     suspend fun registrar(item: SeguimientoEntity, pendienteId: Int? = null) = db.withTransaction {
         val usuario = usuarioActual()
         val oportunidad = comprobarAcceso(item.oportunidadId, usuario)
-        val errores = com.agencia.atenas.utils.validarSeguimiento(
+        val errores = com.agencia.atenas.utils.validacion.validarSeguimiento(
             item.accion, item.resultado, item.proximaAccion,
             Fechas.visible(item.fechaProxima), item.observaciones
         )
@@ -235,7 +235,7 @@ class OportunidadRepository(private val db: AppDatabase) {
             EstadoOportunidad.ACTIVACION_REALIZADA, EstadoOportunidad.CERRADO)) {
             "La participación debe estar confirmada antes de registrar su resultado"
         }
-        val errores = com.agencia.atenas.utils.validarResultado(estado)
+        val errores = com.agencia.atenas.utils.validacion.validarResultado(estado)
         require(errores.isEmpty()) { errores.values.firstOrNull().orEmpty() }
         // Paso 1: registrar la evaluación con autor y oportunidad. registrar devuelve
         // el ID generado y aplica las reglas de identidad, contacto y acceso.

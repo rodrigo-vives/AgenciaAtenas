@@ -3,12 +3,13 @@ package com.agencia.atenas.ui.oportunidades.resultado
 import android.app.Application
 import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.viewModelScope
-import com.agencia.atenas.utils.*
 import kotlinx.coroutines.CancellationException
 import kotlinx.coroutines.flow.*
 import kotlinx.coroutines.launch
 import com.agencia.atenas.data.base.AppDatabase
 import com.agencia.atenas.data.oportunidades.OportunidadRepository
+import com.agencia.atenas.utils.validacion.Fechas
+import com.agencia.atenas.utils.validacion.validarResultado
 
 /** El borrador solo se limpia al confirmar seguimiento + indicadores + cambio de estado. */
 class ResultadoViewModel(application: Application) : AndroidViewModel(application) {

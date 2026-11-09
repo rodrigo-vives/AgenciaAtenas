@@ -15,9 +15,11 @@ import androidx.lifecycle.viewmodel.compose.viewModel
 import com.agencia.atenas.data.oportunidades.EstadoOportunidad
 import com.agencia.atenas.data.oportunidades.OportunidadDetalle
 import com.agencia.atenas.ui.theme.*
-import com.agencia.atenas.utils.*
 import com.agencia.atenas.ui.componentes.Campo
 import com.agencia.atenas.ui.componentes.Selector
+import com.agencia.atenas.utils.SesionActual
+import com.agencia.atenas.utils.fechas.diasDeAlertaEvento
+import com.agencia.atenas.utils.validacion.Fechas
 
 @Composable
 fun ListaScreen(onIrACrear: () -> Unit, onIrADetalle: (Int) -> Unit,

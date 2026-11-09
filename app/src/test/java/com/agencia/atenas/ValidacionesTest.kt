@@ -1,12 +1,16 @@
 package com.agencia.atenas
 
-import com.agencia.atenas.utils.*
 import com.agencia.atenas.ui.oportunidades.formulario.CrearUiState
 import org.junit.Assert.*
 import org.junit.Test
 import com.agencia.atenas.data.oportunidades.EstadoOportunidad
 import com.agencia.atenas.data.oportunidades.estadosPermitidos
 import com.agencia.atenas.data.usuarios.cuentasIniciales
+import com.agencia.atenas.utils.SesionActual
+import com.agencia.atenas.utils.validacion.Fechas
+import com.agencia.atenas.utils.validacion.validarCorreo
+import com.agencia.atenas.utils.validacion.validarOportunidad
+import com.agencia.atenas.utils.validacion.validarTelefono
 
 class ValidacionesTest {
     private fun minimo() = CrearUiState(nombreOportunidad = "Feria de prueba",

@@ -1,4 +1,4 @@
-package com.agencia.atenas.utils
+package com.agencia.atenas.utils.imagenes
 
 import android.graphics.Bitmap
 import android.graphics.BitmapFactory

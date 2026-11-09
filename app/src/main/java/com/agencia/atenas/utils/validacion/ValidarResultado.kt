@@ -1,4 +1,4 @@
-package com.agencia.atenas.utils
+package com.agencia.atenas.utils.validacion
 
 import com.agencia.atenas.ui.oportunidades.resultado.ResultadoUiState
 

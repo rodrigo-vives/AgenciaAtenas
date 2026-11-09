@@ -1,7 +1,7 @@
 package com.agencia.atenas
 
 import com.agencia.atenas.ui.oportunidades.resultado.ResultadoUiState
-import com.agencia.atenas.utils.validarResultado
+import com.agencia.atenas.utils.validacion.validarResultado
 import org.junit.Assert.*
 import org.junit.Test
 

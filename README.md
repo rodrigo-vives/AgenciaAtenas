@@ -45,6 +45,14 @@ Los nueve destinos originales eran: Login, Inicio, Lista, Crear/Editar, Detalle,
 
 UI (Compose) -> ViewModel (StateFlow) -> Repository -> DAO -> Room.
 
+El código Kotlin está en `app/src/main/java/com/agencia/atenas/`. Dentro de esa carpeta:
+
+| Carpeta | Qué encontrarás |
+| --- | --- |
+| `ui/` | `navegacion`, `componentes`, `login`, `inicio`, `catalogos`, `perfil`, `evidencias` y `theme`. En `ui/oportunidades/` están `lista`, `formulario` (crear y editar), `detalle` (incluye seguimiento) y `resultado`. |
+| `data/` | `base` (Room), `usuarios`, `oportunidades`, `catalogos` y `evidencias`. |
+| `utils/` | `validacion` (formularios y conversión común de fechas en `Validaciones.kt`), `fechas` (calendario, alertas y recordatorios) e `imagenes` (vistas previas). `SesionActual.kt` queda directamente en `utils/`. |
+
 Las entidades son Usuario, Organización, Contacto, Oportunidad, OportunidadContacto, Seguimiento y ResultadoActivacion. Se usan claves primarias y foráneas; los nombres de catálogo se consultan por JOIN. OportunidadContacto selecciona un contacto principal por oportunidad. Una próxima acción resuelta apunta al seguimiento que registró su resultado.
 
 AppDatabase crea agencia_atenas.db, versión 5, en el almacenamiento privado del dispositivo. No contiene migraciones históricas ni borrado automático de datos incompatibles. Una instalación nueva crea directamente el esquema actual; una instalación con esquema antiguo necesita reiniciar sus datos de prueba. Cerrar la app no borra registros. El ZIP del código no incluye los registros del emulador.

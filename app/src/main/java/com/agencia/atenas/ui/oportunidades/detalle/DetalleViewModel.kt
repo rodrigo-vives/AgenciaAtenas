@@ -3,9 +3,9 @@ package com.agencia.atenas.ui.oportunidades.detalle
 import android.app.Application
 import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.viewModelScope
-import com.agencia.atenas.utils.Fechas
+import com.agencia.atenas.utils.validacion.Fechas
 import com.agencia.atenas.utils.SesionActual
-import com.agencia.atenas.utils.validarSeguimiento
+import com.agencia.atenas.utils.validacion.validarSeguimiento
 import kotlinx.coroutines.CancellationException
 import kotlinx.coroutines.Job
 import kotlinx.coroutines.flow.MutableStateFlow

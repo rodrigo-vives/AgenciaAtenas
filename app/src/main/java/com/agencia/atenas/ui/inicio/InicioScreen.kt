@@ -11,9 +11,12 @@ import androidx.lifecycle.compose.collectAsStateWithLifecycle
 import androidx.lifecycle.viewmodel.compose.viewModel
 import com.agencia.atenas.data.oportunidades.EstadoOportunidad
 import com.agencia.atenas.data.oportunidades.RecordatorioSeguimiento
-import com.agencia.atenas.utils.*
 import com.agencia.atenas.ui.componentes.MensajeOperacion
 import com.agencia.atenas.ui.componentes.Pagina
+import com.agencia.atenas.utils.SesionActual
+import com.agencia.atenas.utils.fechas.SituacionRecordatorio
+import com.agencia.atenas.utils.fechas.situacionRecordatorio
+import com.agencia.atenas.utils.validacion.Fechas
 
 /**
  * Recordatorios internos: se muestran al abrir Inicio, sin notificaciones del sistema

@@ -1,6 +1,6 @@
 package com.agencia.atenas
 
-import com.agencia.atenas.utils.intervaloCalendario
+import com.agencia.atenas.utils.fechas.intervaloCalendario
 import java.util.TimeZone
 import org.junit.Assert.*
 import org.junit.Test

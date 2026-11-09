@@ -1,4 +1,6 @@
-package com.agencia.atenas.utils
+package com.agencia.atenas.utils.fechas
+
+import com.agencia.atenas.utils.validacion.Fechas
 
 /**
  * Una acción sin resolver es atrasada si su fecha es anterior a hoy; la de hoy

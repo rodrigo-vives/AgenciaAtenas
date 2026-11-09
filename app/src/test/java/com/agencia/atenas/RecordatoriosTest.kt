@@ -1,8 +1,10 @@
 package com.agencia.atenas
 
-import com.agencia.atenas.utils.*
 import org.junit.Assert.*
 import org.junit.Test
+import com.agencia.atenas.utils.fechas.SituacionRecordatorio
+import com.agencia.atenas.utils.fechas.situacionRecordatorio
+import com.agencia.atenas.utils.validacion.validarSeguimiento
 
 class RecordatoriosTest {
     @Test fun separaAyerHoyYFechasFuturas() {

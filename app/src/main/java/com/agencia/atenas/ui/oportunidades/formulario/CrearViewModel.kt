@@ -3,9 +3,9 @@ package com.agencia.atenas.ui.oportunidades.formulario
 import android.app.Application
 import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.viewModelScope
-import com.agencia.atenas.utils.Fechas
+import com.agencia.atenas.utils.validacion.Fechas
 import com.agencia.atenas.utils.SesionActual
-import com.agencia.atenas.utils.validarOportunidad
+import com.agencia.atenas.utils.validacion.validarOportunidad
 import kotlinx.coroutines.CancellationException
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.SharingStarted

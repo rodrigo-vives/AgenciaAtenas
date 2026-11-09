@@ -1,7 +1,7 @@
 package com.agencia.atenas.ui.oportunidades.lista
 
 import com.agencia.atenas.data.oportunidades.OportunidadDetalle
-import com.agencia.atenas.utils.Fechas
+import com.agencia.atenas.utils.validacion.Fechas
 
 /**
  * Instantánea del listado: datos recibidos de Room y filtros elegidos por el usuario.

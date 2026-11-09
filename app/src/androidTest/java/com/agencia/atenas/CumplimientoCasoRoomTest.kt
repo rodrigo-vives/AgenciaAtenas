@@ -5,7 +5,6 @@ import androidx.room.Room
 import androidx.test.ext.junit.runners.AndroidJUnit4
 import androidx.test.platform.app.InstrumentationRegistry
 import com.agencia.atenas.ui.oportunidades.resultado.ResultadoUiState
-import com.agencia.atenas.utils.*
 import java.io.File
 import java.util.UUID
 import kotlinx.coroutines.flow.first
@@ -24,6 +23,8 @@ import com.agencia.atenas.data.oportunidades.OportunidadRepository
 import com.agencia.atenas.data.oportunidades.SeguimientoEntity
 import com.agencia.atenas.data.usuarios.UsuarioEntity
 import com.agencia.atenas.data.usuarios.UsuarioRepository
+import com.agencia.atenas.utils.SesionActual
+import com.agencia.atenas.utils.validacion.Fechas
 
 /** Solo bases en memoria y carpetas temporales propias: no borra los datos de la app. */
 @RunWith(AndroidJUnit4::class)

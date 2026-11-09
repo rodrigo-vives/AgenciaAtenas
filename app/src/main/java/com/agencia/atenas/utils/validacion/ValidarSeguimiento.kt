@@ -1,4 +1,4 @@
-package com.agencia.atenas.utils
+package com.agencia.atenas.utils.validacion
 
 /**
  * Comparte las reglas entre ViewModel y Repository. Así un guardado no depende
