@@ -34,7 +34,7 @@ import androidx.compose.ui.unit.dp
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
 import androidx.lifecycle.viewmodel.compose.viewModel
 import com.agencia.atenas.R
-import com.agencia.atenas.ui.theme.TemaIngreso
+import com.agencia.atenas.ui.theme.TemaMarca
 import com.agencia.atenas.ui.theme.BotonIngresar
 import com.agencia.atenas.ui.theme.relleno
 
@@ -45,7 +45,7 @@ fun LoginScreen(
 ) {
     val estado by viewModel.uiState.collectAsStateWithLifecycle()
 
-    TemaIngreso {
+    TemaMarca {
         Scaffold(containerColor = MaterialTheme.colorScheme.background) { innerPadding ->
             // Todo el contenido se desplaza para alcanzar el botón con el teclado abierto.
             Column(

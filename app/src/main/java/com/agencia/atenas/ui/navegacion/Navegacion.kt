@@ -64,7 +64,7 @@ fun Navegacion() {
                 onDetalle = { id -> navController.navigate("detalle/$id") }
             )
         }
-        composable("perfil") { PerfilScreen(onVolver = volver) }
+        composable("perfil") { PerfilScreen(onVolver = volver, onCerrarSesion = salir) }
         composable("lista") {
             ListaScreen(
                 onIrACrear = { navController.navigate("crear") },

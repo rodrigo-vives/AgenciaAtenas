@@ -26,7 +26,7 @@ private val LightColorScheme = lightColorScheme(
 
 )
 
-private val PaletaIngreso = lightColorScheme(
+private val PaletaMarca = lightColorScheme(
     primary = AcentoIngreso,
     onPrimary = SuperficieIngreso,
     background = FondoIngreso,
@@ -40,10 +40,10 @@ private val PaletaIngreso = lightColorScheme(
     inverseOnSurface = FondoIngreso
 )
 
-// El ingreso conserva los colores de marca sin cambiar el tema del resto de la app.
+// Ingreso y perfil comparten la paleta de marca.
 @Composable
-fun TemaIngreso(content: @Composable () -> Unit) {
-    MaterialTheme(colorScheme = PaletaIngreso, typography = Typography, content = content)
+fun TemaMarca(content: @Composable () -> Unit) {
+    MaterialTheme(colorScheme = PaletaMarca, typography = Typography, content = content)
 }
 
 // Material 3 conserva sus colores originales cuando el valor es Color.Unspecified.

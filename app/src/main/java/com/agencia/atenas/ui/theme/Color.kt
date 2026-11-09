@@ -52,3 +52,12 @@ val BotonContorno = ColoresBoton()
 
 // El ingreso tiene su propia paleta.
 val BotonIngresar = ColoresBoton(fondo = AcentoIngreso, texto = SuperficieIngreso)
+
+// Acentos de perfil y acciones sobre el encabezado oscuro.
+val FondoAcentoSuave = Color(0xFFF0E7FF)
+val TextoAcentoSuave = Color(0xFF5422A6)
+val BotonVolverEncabezado = ColoresBoton(texto = FondoIngreso)
+val BotonCerrarSesion = ColoresBoton(
+    fondo = Color(0xFFFFDAD8),
+    texto = Color(0xFF93000A)
+)
