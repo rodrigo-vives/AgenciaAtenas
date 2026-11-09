@@ -11,7 +11,7 @@ import com.agencia.atenas.utils.*
 import com.agencia.atenas.ui.componentes.MensajeOperacion
 import com.agencia.atenas.ui.componentes.Pagina
 import com.agencia.atenas.ui.componentes.Selector
-import com.agencia.atenas.ui.RecursosOportunidad
+import com.agencia.atenas.ui.evidencias.RecursosOportunidad
 
 /**
  * Consulta una oportunidad ya guardada y muestra todos sus datos. Desde aquí se abre

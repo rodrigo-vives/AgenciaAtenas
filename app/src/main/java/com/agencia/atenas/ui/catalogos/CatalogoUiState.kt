@@ -1,4 +1,4 @@
-package com.agencia.atenas.ui
+package com.agencia.atenas.ui.catalogos
 
 /**
  * Datos temporales del formulario de organización/contacto. organizacionId es la clave

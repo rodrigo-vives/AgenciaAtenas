@@ -1,6 +1,6 @@
 package com.agencia.atenas.utils
 
-import com.agencia.atenas.ui.CatalogoUiState
+import com.agencia.atenas.ui.catalogos.CatalogoUiState
 
 /**
  * Reglas del formulario de organizaciones/contactos, fuera de Compose y del ViewModel.

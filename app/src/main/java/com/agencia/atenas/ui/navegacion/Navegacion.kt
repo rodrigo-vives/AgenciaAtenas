@@ -7,15 +7,15 @@ import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
 import androidx.navigation.navArgument
 import com.agencia.atenas.utils.SesionActual
-import com.agencia.atenas.ui.CatalogoScreen
+import com.agencia.atenas.ui.catalogos.CatalogoScreen
 import com.agencia.atenas.ui.oportunidades.formulario.CrearScreen
 import com.agencia.atenas.ui.oportunidades.detalle.DetalleScreen
-import com.agencia.atenas.ui.HistorialCatalogoScreen
-import com.agencia.atenas.ui.InicioScreen
+import com.agencia.atenas.ui.catalogos.HistorialCatalogoScreen
+import com.agencia.atenas.ui.inicio.InicioScreen
 import com.agencia.atenas.ui.oportunidades.lista.ListaScreen
 import com.agencia.atenas.ui.oportunidades.resultado.ResultadoScreen
 import com.agencia.atenas.ui.oportunidades.detalle.SeguimientoScreen
-import com.agencia.atenas.ui.SupervisorScreen
+import com.agencia.atenas.ui.inicio.SupervisorScreen
 import com.agencia.atenas.ui.login.LoginScreen
 import com.agencia.atenas.ui.perfil.PerfilScreen
 

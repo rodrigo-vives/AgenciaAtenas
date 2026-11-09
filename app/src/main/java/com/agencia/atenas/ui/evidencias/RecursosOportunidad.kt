@@ -1,4 +1,4 @@
-package com.agencia.atenas.ui
+package com.agencia.atenas.ui.evidencias
 
 import android.content.ActivityNotFoundException
 import android.content.Intent

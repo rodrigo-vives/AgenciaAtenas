@@ -1,4 +1,4 @@
-package com.agencia.atenas.ui
+package com.agencia.atenas.ui.inicio
 
 import androidx.compose.foundation.layout.*
 import androidx.compose.material3.*

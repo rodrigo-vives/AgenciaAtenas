@@ -1,4 +1,4 @@
-package com.agencia.atenas.ui
+package com.agencia.atenas.ui.evidencias
 
 
 /** Rutas de fotos y progreso; no guarda bitmaps pesados ni realiza consultas. */

@@ -1,6 +1,6 @@
 package com.agencia.atenas
 
-import com.agencia.atenas.ui.CatalogoUiState
+import com.agencia.atenas.ui.catalogos.CatalogoUiState
 import com.agencia.atenas.utils.validarCatalogo
 import org.junit.Assert.*
 import org.junit.Test
