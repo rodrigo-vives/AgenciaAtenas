@@ -4,7 +4,6 @@ import android.graphics.Bitmap
 import androidx.room.Room
 import androidx.test.ext.junit.runners.AndroidJUnit4
 import androidx.test.platform.app.InstrumentationRegistry
-import com.agencia.atenas.data.*
 import com.agencia.atenas.ui.oportunidades.resultado.ResultadoUiState
 import com.agencia.atenas.utils.*
 import java.io.File
@@ -14,6 +13,17 @@ import kotlinx.coroutines.runBlocking
 import org.junit.Assert.*
 import org.junit.Test
 import org.junit.runner.RunWith
+import com.agencia.atenas.data.base.AppDatabase
+import com.agencia.atenas.data.catalogos.CatalogoRepository
+import com.agencia.atenas.data.catalogos.ContactoEntity
+import com.agencia.atenas.data.catalogos.OrganizacionEntity
+import com.agencia.atenas.data.evidencias.EvidenciaRepository
+import com.agencia.atenas.data.oportunidades.EstadoOportunidad
+import com.agencia.atenas.data.oportunidades.GestionOportunidadEntity
+import com.agencia.atenas.data.oportunidades.OportunidadRepository
+import com.agencia.atenas.data.oportunidades.SeguimientoEntity
+import com.agencia.atenas.data.usuarios.UsuarioEntity
+import com.agencia.atenas.data.usuarios.UsuarioRepository
 
 /** Solo bases en memoria y carpetas temporales propias: no borra los datos de la app. */
 @RunWith(AndroidJUnit4::class)

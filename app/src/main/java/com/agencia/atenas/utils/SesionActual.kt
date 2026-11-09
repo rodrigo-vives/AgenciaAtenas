@@ -1,7 +1,7 @@
 package com.agencia.atenas.utils
 
-import com.agencia.atenas.data.Roles
-import com.agencia.atenas.data.UsuarioEntity
+import com.agencia.atenas.data.usuarios.Roles
+import com.agencia.atenas.data.usuarios.UsuarioEntity
 
 /**
  * La sesión sigue siendo temporal: cerrar el proceso exige iniciar sesión otra vez.

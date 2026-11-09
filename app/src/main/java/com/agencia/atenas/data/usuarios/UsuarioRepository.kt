@@ -1,7 +1,8 @@
-package com.agencia.atenas.data
+package com.agencia.atenas.data.usuarios
 
 import androidx.room.withTransaction
 import java.security.MessageDigest
+import com.agencia.atenas.data.base.AppDatabase
 
 /**
  * Se conserva el acceso local ficticio del curso, ahora consultando Room.

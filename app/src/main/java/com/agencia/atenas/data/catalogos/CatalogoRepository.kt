@@ -1,6 +1,8 @@
-package com.agencia.atenas.data
+package com.agencia.atenas.data.catalogos
 
 import com.agencia.atenas.utils.*
+import com.agencia.atenas.data.base.AppDatabase
+import com.agencia.atenas.data.usuarios.Roles
 
 /**
  * Acceso a Room para organizaciones y contactos. Repite las comprobaciones básicas antes

@@ -1,4 +1,4 @@
-package com.agencia.atenas.data
+package com.agencia.atenas.data.catalogos
 
 import androidx.room.*
 import kotlinx.coroutines.flow.Flow

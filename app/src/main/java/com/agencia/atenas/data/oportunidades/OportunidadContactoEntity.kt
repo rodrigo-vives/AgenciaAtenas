@@ -1,9 +1,10 @@
-package com.agencia.atenas.data
+package com.agencia.atenas.data.oportunidades
 
 import androidx.room.Entity
 import androidx.room.ForeignKey
 import androidx.room.Index
 import androidx.room.PrimaryKey
+import com.agencia.atenas.data.catalogos.ContactoEntity
 
 /**
  * Contacto principal elegido para una oportunidad (como máximo uno en este formulario).

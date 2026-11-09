@@ -1,7 +1,7 @@
 package com.agencia.atenas
 
-import com.agencia.atenas.data.EstadoOportunidad
-import com.agencia.atenas.data.estadosPermitidos
+import com.agencia.atenas.data.oportunidades.EstadoOportunidad
+import com.agencia.atenas.data.oportunidades.estadosPermitidos
 import org.junit.Assert.*
 import org.junit.Test
 

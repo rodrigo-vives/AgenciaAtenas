@@ -6,7 +6,6 @@ import androidx.lifecycle.compose.collectAsStateWithLifecycle
 import androidx.lifecycle.compose.LifecycleEventEffect
 import androidx.lifecycle.Lifecycle
 import androidx.lifecycle.viewmodel.compose.viewModel
-import com.agencia.atenas.data.*
 import com.agencia.atenas.utils.*
 import com.agencia.atenas.ui.componentes.MensajeOperacion
 import com.agencia.atenas.ui.componentes.Pagina

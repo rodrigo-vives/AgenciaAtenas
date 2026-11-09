@@ -1,7 +1,13 @@
-package com.agencia.atenas.data
+package com.agencia.atenas.data.catalogos
 
 import androidx.room.*
 import kotlinx.coroutines.flow.Flow
+import com.agencia.atenas.data.oportunidades.HistorialContactoItem
+import com.agencia.atenas.data.oportunidades.RecordatorioSeguimiento
+import com.agencia.atenas.data.oportunidades.ResultadoActivacionDetalle
+import com.agencia.atenas.data.oportunidades.ResultadoActivacionEntity
+import com.agencia.atenas.data.oportunidades.SeguimientoDetalle
+import com.agencia.atenas.data.oportunidades.SeguimientoEntity
 
 /*
  * Room genera la implementación de esta interfaz durante la compilación.

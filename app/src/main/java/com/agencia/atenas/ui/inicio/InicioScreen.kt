@@ -9,8 +9,8 @@ import androidx.lifecycle.Lifecycle
 import androidx.lifecycle.compose.LifecycleEventEffect
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
 import androidx.lifecycle.viewmodel.compose.viewModel
-import com.agencia.atenas.data.EstadoOportunidad
-import com.agencia.atenas.data.RecordatorioSeguimiento
+import com.agencia.atenas.data.oportunidades.EstadoOportunidad
+import com.agencia.atenas.data.oportunidades.RecordatorioSeguimiento
 import com.agencia.atenas.utils.*
 import com.agencia.atenas.ui.componentes.MensajeOperacion
 import com.agencia.atenas.ui.componentes.Pagina

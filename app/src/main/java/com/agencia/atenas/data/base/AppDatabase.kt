@@ -1,10 +1,20 @@
-package com.agencia.atenas.data
+package com.agencia.atenas.data.base
 
 import android.content.Context
 import androidx.room.Database
 import androidx.room.Room
 import androidx.room.RoomDatabase
 import androidx.room.TypeConverters
+import com.agencia.atenas.data.catalogos.CatalogoDao
+import com.agencia.atenas.data.catalogos.ContactoEntity
+import com.agencia.atenas.data.catalogos.OrganizacionEntity
+import com.agencia.atenas.data.oportunidades.GestionOportunidadEntity
+import com.agencia.atenas.data.oportunidades.OportunidadContactoEntity
+import com.agencia.atenas.data.oportunidades.OportunidadDao
+import com.agencia.atenas.data.oportunidades.ResultadoActivacionEntity
+import com.agencia.atenas.data.oportunidades.SeguimientoEntity
+import com.agencia.atenas.data.usuarios.UsuarioDao
+import com.agencia.atenas.data.usuarios.UsuarioEntity
 
 /**
  * Esquema 5 para instalación limpia, elegido por el equipo sin migraciones.

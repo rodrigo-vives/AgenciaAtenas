@@ -1,7 +1,7 @@
 package com.agencia.atenas.ui.inicio
 
-import com.agencia.atenas.data.OportunidadDetalle
-import com.agencia.atenas.data.RecordatorioSeguimiento
+import com.agencia.atenas.data.oportunidades.OportunidadDetalle
+import com.agencia.atenas.data.oportunidades.RecordatorioSeguimiento
 
 /** Una sola instantánea mantiene coherentes las oportunidades y sus tareas visibles. */
 data class InicioUiState(

@@ -3,7 +3,6 @@ package com.agencia.atenas.ui.oportunidades.formulario
 import android.app.Application
 import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.viewModelScope
-import com.agencia.atenas.data.*
 import com.agencia.atenas.utils.Fechas
 import com.agencia.atenas.utils.SesionActual
 import com.agencia.atenas.utils.validarOportunidad
@@ -14,6 +13,14 @@ import kotlinx.coroutines.flow.asStateFlow
 import kotlinx.coroutines.flow.stateIn
 import kotlinx.coroutines.flow.update
 import kotlinx.coroutines.launch
+import com.agencia.atenas.data.base.AppDatabase
+import com.agencia.atenas.data.catalogos.CatalogoRepository
+import com.agencia.atenas.data.catalogos.ContactoEntity
+import com.agencia.atenas.data.catalogos.OrganizacionEntity
+import com.agencia.atenas.data.oportunidades.EstadoOportunidad
+import com.agencia.atenas.data.oportunidades.GestionOportunidadEntity
+import com.agencia.atenas.data.oportunidades.OportunidadDetalle
+import com.agencia.atenas.data.oportunidades.OportunidadRepository
 
 /**
  * Coordina el formulario sin escribir SQL ni navegar.

@@ -1,4 +1,4 @@
-package com.agencia.atenas.data
+package com.agencia.atenas.data.oportunidades
 
 /**
  * Resultado de una consulta, no una tabla nueva. Usa el responsable ACTUAL de la

@@ -4,8 +4,8 @@ import android.app.Application
 import android.util.Log
 import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.viewModelScope
-import com.agencia.atenas.data.AppDatabase
-import com.agencia.atenas.data.UsuarioRepository
+import com.agencia.atenas.data.base.AppDatabase
+import com.agencia.atenas.data.usuarios.UsuarioRepository
 import com.agencia.atenas.utils.SesionActual
 import kotlinx.coroutines.CancellationException
 import kotlinx.coroutines.flow.MutableStateFlow

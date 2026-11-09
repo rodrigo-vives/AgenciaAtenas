@@ -4,7 +4,7 @@ import androidx.compose.material3.*
 import androidx.compose.runtime.*
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
 import androidx.lifecycle.viewmodel.compose.viewModel
-import com.agencia.atenas.data.Roles
+import com.agencia.atenas.data.usuarios.Roles
 import com.agencia.atenas.ui.oportunidades.detalle.Dato
 import com.agencia.atenas.ui.componentes.Pagina
 

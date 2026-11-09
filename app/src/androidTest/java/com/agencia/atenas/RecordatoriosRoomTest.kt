@@ -3,13 +3,19 @@ package com.agencia.atenas
 import androidx.room.Room
 import androidx.test.ext.junit.runners.AndroidJUnit4
 import androidx.test.platform.app.InstrumentationRegistry
-import com.agencia.atenas.data.*
 import com.agencia.atenas.utils.SesionActual
 import kotlinx.coroutines.flow.first
 import kotlinx.coroutines.runBlocking
 import org.junit.Assert.*
 import org.junit.Test
 import org.junit.runner.RunWith
+import com.agencia.atenas.data.base.AppDatabase
+import com.agencia.atenas.data.oportunidades.EstadoOportunidad
+import com.agencia.atenas.data.oportunidades.GestionOportunidadEntity
+import com.agencia.atenas.data.oportunidades.OportunidadRepository
+import com.agencia.atenas.data.oportunidades.SeguimientoEntity
+import com.agencia.atenas.data.usuarios.UsuarioEntity
+import com.agencia.atenas.data.usuarios.UsuarioRepository
 
 /** Bases en memoria aisladas: no se modifican los datos del usuario en agencia_atenas.db. */
 @RunWith(AndroidJUnit4::class)

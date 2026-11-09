@@ -3,7 +3,6 @@ package com.agencia.atenas.ui.oportunidades.detalle
 import android.app.Application
 import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.viewModelScope
-import com.agencia.atenas.data.*
 import com.agencia.atenas.utils.Fechas
 import com.agencia.atenas.utils.SesionActual
 import com.agencia.atenas.utils.validarSeguimiento
@@ -14,6 +13,10 @@ import kotlinx.coroutines.flow.asStateFlow
 import kotlinx.coroutines.flow.update
 import kotlinx.coroutines.flow.combine
 import kotlinx.coroutines.launch
+import com.agencia.atenas.data.base.AppDatabase
+import com.agencia.atenas.data.oportunidades.EstadoOportunidad
+import com.agencia.atenas.data.oportunidades.OportunidadRepository
+import com.agencia.atenas.data.oportunidades.SeguimientoEntity
 
 /**
  * Detalle y Seguimiento tienen instancias propias de esta clase, una por destino.

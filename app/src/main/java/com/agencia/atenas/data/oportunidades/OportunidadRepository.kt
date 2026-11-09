@@ -1,4 +1,4 @@
-package com.agencia.atenas.data
+package com.agencia.atenas.data.oportunidades
 
 import androidx.room.withTransaction
 import com.agencia.atenas.utils.Fechas
@@ -6,6 +6,9 @@ import com.agencia.atenas.utils.SesionActual
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.combine
 import kotlinx.coroutines.flow.flowOf
+import com.agencia.atenas.data.base.AppDatabase
+import com.agencia.atenas.data.usuarios.Roles
+import com.agencia.atenas.data.usuarios.UsuarioEntity
 
 /**
  * Todas las escrituras comprueban la identidad leyendo usuarios en Room.

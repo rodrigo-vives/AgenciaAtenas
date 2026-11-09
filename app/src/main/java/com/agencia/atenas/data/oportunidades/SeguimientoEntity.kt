@@ -1,4 +1,4 @@
-package com.agencia.atenas.data
+package com.agencia.atenas.data.oportunidades
 
 import androidx.room.Embedded
 import androidx.room.Entity
@@ -6,6 +6,8 @@ import androidx.room.ForeignKey
 import androidx.room.Index
 import androidx.room.Ignore
 import androidx.room.PrimaryKey
+import com.agencia.atenas.data.catalogos.ContactoEntity
+import com.agencia.atenas.data.usuarios.UsuarioEntity
 
 /**
  * CAMBIO: la gestión referencia al usuario por responsableId, sin copiar su login.

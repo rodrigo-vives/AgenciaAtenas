@@ -1,6 +1,6 @@
 package com.agencia.atenas
 
-import com.agencia.atenas.data.EstadoOportunidad
+import com.agencia.atenas.data.oportunidades.EstadoOportunidad
 import com.agencia.atenas.utils.diasDeAlertaEvento
 import org.junit.Assert.*
 import org.junit.Test

@@ -1,6 +1,6 @@
 package com.agencia.atenas.ui.oportunidades.lista
 
-import com.agencia.atenas.data.OportunidadDetalle
+import com.agencia.atenas.data.oportunidades.OportunidadDetalle
 import com.agencia.atenas.utils.Fechas
 
 /**

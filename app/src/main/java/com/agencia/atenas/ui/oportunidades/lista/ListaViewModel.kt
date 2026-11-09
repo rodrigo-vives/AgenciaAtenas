@@ -3,7 +3,7 @@ package com.agencia.atenas.ui.oportunidades.lista
 import android.app.Application
 import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.viewModelScope
-import com.agencia.atenas.data.AppDatabase
+import com.agencia.atenas.data.base.AppDatabase
 import com.agencia.atenas.utils.SesionActual
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
@@ -16,7 +16,7 @@ import kotlinx.coroutines.launch
 class ListaViewModel(application: Application) : AndroidViewModel(application) {
 
     // CAMBIO: Repository aplica el alcance por usuario también al listado.
-    private val repository = com.agencia.atenas.data.OportunidadRepository(AppDatabase.obtenerBaseDeDatos(application))
+    private val repository = com.agencia.atenas.data.oportunidades.OportunidadRepository(AppDatabase.obtenerBaseDeDatos(application))
 
     // Estado interno (solo el ViewModel lo modifica).
     private val _uiState = MutableStateFlow(ListaUiState())

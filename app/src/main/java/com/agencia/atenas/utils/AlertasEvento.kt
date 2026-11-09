@@ -1,6 +1,6 @@
 package com.agencia.atenas.utils
 
-import com.agencia.atenas.data.EstadoOportunidad
+import com.agencia.atenas.data.oportunidades.EstadoOportunidad
 import java.text.SimpleDateFormat
 import java.util.Locale
 import java.util.TimeZone

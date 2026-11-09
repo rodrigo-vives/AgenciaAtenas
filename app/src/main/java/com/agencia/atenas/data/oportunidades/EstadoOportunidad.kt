@@ -1,4 +1,4 @@
-package com.agencia.atenas.data
+package com.agencia.atenas.data.oportunidades
 
 /**
  * Estados posibles de una gestión de oportunidad.

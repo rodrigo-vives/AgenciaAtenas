@@ -1,6 +1,9 @@
 package com.agencia.atenas.ui.oportunidades.detalle
 
-import com.agencia.atenas.data.*
+import com.agencia.atenas.data.oportunidades.OportunidadDetalle
+import com.agencia.atenas.data.oportunidades.ResultadoActivacionDetalle
+import com.agencia.atenas.data.oportunidades.SeguimientoDetalle
+
 
 /**
  * Guarda la oportunidad consultada, el historial y el borrador de una nueva gestión.

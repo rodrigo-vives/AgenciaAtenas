@@ -1,9 +1,11 @@
-package com.agencia.atenas.data
+package com.agencia.atenas.data.oportunidades
 
 import androidx.room.Entity
 import androidx.room.ForeignKey
 import androidx.room.Index
 import androidx.room.PrimaryKey
+import com.agencia.atenas.data.catalogos.OrganizacionEntity
+import com.agencia.atenas.data.usuarios.UsuarioEntity
 
 /**
  * Oportunidad y datos de su evento. Cada fila representa una gestión comercial.

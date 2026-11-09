@@ -1,10 +1,12 @@
-package com.agencia.atenas.data
+package com.agencia.atenas.data.evidencias
 
 import android.content.Context
 import java.io.File
 import java.util.UUID
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.withContext
+import com.agencia.atenas.data.base.AppDatabase
+import com.agencia.atenas.data.oportunidades.OportunidadRepository
 
 /**
  * Las fotos son archivos, no texto ni bitmaps dentro de SQLite.

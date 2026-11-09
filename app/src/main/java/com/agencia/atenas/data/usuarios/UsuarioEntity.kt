@@ -1,4 +1,4 @@
-package com.agencia.atenas.data
+package com.agencia.atenas.data.usuarios
 
 import androidx.room.Entity
 import androidx.room.Index

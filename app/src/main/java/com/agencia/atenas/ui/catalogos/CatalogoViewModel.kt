@@ -3,11 +3,12 @@ package com.agencia.atenas.ui.catalogos
 import android.app.Application
 import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.viewModelScope
-import com.agencia.atenas.data.*
 import com.agencia.atenas.utils.*
 import kotlinx.coroutines.CancellationException
 import kotlinx.coroutines.flow.*
 import kotlinx.coroutines.launch
+import com.agencia.atenas.data.base.AppDatabase
+import com.agencia.atenas.data.catalogos.CatalogoRepository
 
 /*
  * Un contacto exige una organización ya registrada. El selector entrega su id, que se guarda

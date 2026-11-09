@@ -1,6 +1,7 @@
-package com.agencia.atenas.data
+package com.agencia.atenas.data.base
 
 import androidx.room.TypeConverter
+import com.agencia.atenas.data.oportunidades.EstadoOportunidad
 
 /**
  * SQLite no guarda directamente un enum de Kotlin. Room usa estos dos métodos

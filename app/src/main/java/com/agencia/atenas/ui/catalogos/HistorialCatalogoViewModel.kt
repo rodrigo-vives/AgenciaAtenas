@@ -3,11 +3,13 @@ package com.agencia.atenas.ui.catalogos
 import android.app.Application
 import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.viewModelScope
-import com.agencia.atenas.data.*
 import kotlinx.coroutines.CancellationException
 import kotlinx.coroutines.Job
 import kotlinx.coroutines.flow.*
 import kotlinx.coroutines.launch
+import com.agencia.atenas.data.base.AppDatabase
+import com.agencia.atenas.data.catalogos.CatalogoRepository
+import com.agencia.atenas.data.oportunidades.OportunidadRepository
 
 
 

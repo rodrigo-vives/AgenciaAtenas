@@ -1,4 +1,4 @@
-package com.agencia.atenas.data
+package com.agencia.atenas.data.oportunidades
 
 import androidx.room.*
 

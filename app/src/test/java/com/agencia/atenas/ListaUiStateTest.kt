@@ -1,9 +1,11 @@
 package com.agencia.atenas
 
-import com.agencia.atenas.data.*
 import com.agencia.atenas.ui.oportunidades.lista.ListaUiState
 import org.junit.Assert.*
 import org.junit.Test
+import com.agencia.atenas.data.oportunidades.EstadoOportunidad
+import com.agencia.atenas.data.oportunidades.GestionOportunidadEntity
+import com.agencia.atenas.data.oportunidades.OportunidadDetalle
 
 class ListaUiStateTest {
     private fun oportunidad(id: Int, nombre: String, estado: EstadoOportunidad): OportunidadDetalle {

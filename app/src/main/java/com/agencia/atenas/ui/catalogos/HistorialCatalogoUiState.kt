@@ -1,7 +1,7 @@
 package com.agencia.atenas.ui.catalogos
 
-import com.agencia.atenas.data.OportunidadDetalle
-import com.agencia.atenas.data.HistorialContactoItem
+import com.agencia.atenas.data.oportunidades.OportunidadDetalle
+import com.agencia.atenas.data.oportunidades.HistorialContactoItem
 
 /** Datos que observa la pantalla; no realiza consultas ni escribe en la base. */
 data class HistorialCatalogoUiState(
