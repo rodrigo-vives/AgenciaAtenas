@@ -6,7 +6,7 @@ import androidx.compose.ui.graphics.Color
 val AzulMarca = Color(0xFF0F172A)
 val FondoIngreso = Color(0xFFF8FAFC)
 val SuperficieIngreso = Color(0xFFFFFFFF)
-val MoradoAccion = Color(0xFF7C3AED)
+val AcentoIngreso = Color(0xFF7C3AED)
 val TextoSecundarioIngreso = Color(0xFF475569)
 val BordeIngreso = Color(0xFF64748B)
 val BordeTarjetaIngreso = Color(0xFFCBD5E1)
@@ -34,3 +34,21 @@ val FondoExito = FondoOportunidadConfirmada
 val TextoExito = TextoTarjetaOportunidad
 val FondoAdvertencia = FondoEventoProximo
 val TextoAdvertencia = TextoTarjetaOportunidad
+
+// Si no se indica fondo o texto, el botón conserva el color del tema activo.
+data class ColoresBoton(
+    val fondo: Color = Color.Unspecified,
+    val texto: Color = Color.Unspecified
+)
+
+// Botones con fondo: accesos, guardar, editar y otras acciones principales.
+val BotonGeneral = ColoresBoton()
+
+// Acciones sin fondo, como Volver o Limpiar filtros.
+val BotonTexto = ColoresBoton()
+
+// Acciones con borde, como los selectores y Abrir calendario.
+val BotonContorno = ColoresBoton()
+
+// El ingreso tiene su propia paleta.
+val BotonIngresar = ColoresBoton(fondo = AcentoIngreso, texto = SuperficieIngreso)

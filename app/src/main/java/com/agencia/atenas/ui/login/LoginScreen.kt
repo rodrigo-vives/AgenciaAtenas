@@ -35,6 +35,8 @@ import androidx.lifecycle.compose.collectAsStateWithLifecycle
 import androidx.lifecycle.viewmodel.compose.viewModel
 import com.agencia.atenas.R
 import com.agencia.atenas.ui.theme.TemaIngreso
+import com.agencia.atenas.ui.theme.BotonIngresar
+import com.agencia.atenas.ui.theme.relleno
 
 @Composable
 fun LoginScreen(
@@ -152,6 +154,7 @@ private fun FormularioIngreso(
                 Text(estado.mensajeError, color = MaterialTheme.colorScheme.error)
             }
             Button(
+                colors = BotonIngresar.relleno(),
                 onClick = onIngresar,
                 enabled = !estado.cargando,
                 shape = MaterialTheme.shapes.medium,

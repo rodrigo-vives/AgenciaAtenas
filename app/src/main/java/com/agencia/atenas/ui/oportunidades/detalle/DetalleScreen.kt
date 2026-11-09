@@ -10,10 +10,11 @@ import com.agencia.atenas.ui.componentes.MensajeOperacion
 import com.agencia.atenas.ui.componentes.Pagina
 import com.agencia.atenas.ui.componentes.Selector
 import com.agencia.atenas.ui.evidencias.RecursosOportunidad
-import com.agencia.atenas.ui.theme.coloresBotonesDetalle
 import com.agencia.atenas.data.oportunidades.EstadoOportunidad
 import com.agencia.atenas.data.oportunidades.estadosPermitidos
 import com.agencia.atenas.utils.validacion.Fechas
+import com.agencia.atenas.ui.theme.relleno
+import com.agencia.atenas.ui.theme.BotonGeneral
 
 /**
  * Consulta una oportunidad ya guardada y muestra todos sus datos. Desde aquí se abre
@@ -45,17 +46,16 @@ fun DetalleScreen(id: Int,
             Text(item.nombreOportunidad,
                 style = MaterialTheme.typography.titleMedium)
             Text("Estado: ${item.estado.etiqueta}")
-            val coloresAcciones = coloresBotonesDetalle()
-            Button(onClick = onEditar,
-                colors = coloresAcciones,
+
+            Button(colors = BotonGeneral.relleno(), onClick = onEditar,
                 enabled = !estadoFormulario.ocupado) {
                 Text("Editar oportunidad")
             }
-            Button(onClick = onSeguimiento, colors = coloresAcciones) {
+            Button(colors = BotonGeneral.relleno(), onClick = onSeguimiento) {
                 Text("Seguimiento e historial")
             }
             if (item.estado in listOf(EstadoOportunidad.CONFIRMADO, EstadoOportunidad.ACTIVACION_REALIZADA, EstadoOportunidad.CERRADO)) {
-                Button(onClick = onResultado) { Text("Registrar resultado de activación") }
+                Button(colors = BotonGeneral.relleno(), onClick = onResultado) { Text("Registrar resultado de activación") }
             }
             if (estadoFormulario.resultados.isNotEmpty()) {
                 Text("Resultados de activación", style = MaterialTheme.typography.titleLarge)

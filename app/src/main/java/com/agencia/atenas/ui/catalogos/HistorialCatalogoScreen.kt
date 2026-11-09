@@ -8,6 +8,8 @@ import com.agencia.atenas.utils.validacion.Fechas
 import com.agencia.atenas.ui.componentes.MensajeOperacion
 import com.agencia.atenas.ui.componentes.Pagina
 import com.agencia.atenas.ui.oportunidades.detalle.Dato
+import com.agencia.atenas.ui.theme.soloTexto
+import com.agencia.atenas.ui.theme.BotonTexto
 
 /**
  * Reutiliza la misma presentación para contacto u organización. El booleano decide
@@ -26,7 +28,7 @@ fun HistorialCatalogoScreen(id: Int, esContacto: Boolean, onVolver: () -> Unit,
         Text("Oportunidades relacionadas", style = MaterialTheme.typography.titleMedium)
         if (!estado.cargando && estado.eventos.isEmpty()) Text("No hay oportunidades relacionadas visibles")
         estado.eventos.forEach { evento ->
-            TextButton(onClick = { onDetalle(evento.id) }) {
+            TextButton(colors = BotonTexto.soloTexto(), onClick = { onDetalle(evento.id) }) {
                 Text("${evento.nombreOportunidad} · ${Fechas.visible(evento.fechaInicio)}")
             }
         }

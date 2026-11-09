@@ -10,6 +10,8 @@ import com.agencia.atenas.ui.componentes.MensajeOperacion
 import com.agencia.atenas.ui.componentes.Pagina
 import com.agencia.atenas.ui.componentes.Selector
 import com.agencia.atenas.utils.SesionActual
+import com.agencia.atenas.ui.theme.soloTexto
+import com.agencia.atenas.ui.theme.BotonTexto
 
 /**
  * Lista global y selección del ejecutivo responsable. No permite entrar con rol ejecutivo.
@@ -42,7 +44,7 @@ fun SupervisorScreen(onVolver: () -> Unit,
                         viewModel.asignar(item.id,
                             it.substringBefore(':').toInt())
                     }
-                    TextButton(onClick = {
+                    TextButton(colors = BotonTexto.soloTexto(), onClick = {
                             onDetalle(item.id)
                     }) {
                         Text("Ver detalle")

@@ -45,10 +45,10 @@ fun ListaScreen(onIrACrear: () -> Unit, onIrADetalle: (Int) -> Unit,
             item {
                 Text("Oportunidades", style = MaterialTheme.typography.headlineSmall)
                 Text("Hola, ${SesionActual.usuario}")
-                TextButton(onClick = onCerrarSesion) { Text("Cerrar sesión") }
+                TextButton(colors = BotonTexto.soloTexto(), onClick = onCerrarSesion) { Text("Cerrar sesión") }
                 OutlinedTextField(value = estado.textoBusqueda, onValueChange = viewModel::cambiarBusqueda,
                     label = { Text("Buscar por nombre") }, singleLine = true, modifier = Modifier.fillMaxWidth())
-                TextButton(onClick = { filtrosAbiertos = !filtrosAbiertos }) {
+                TextButton(colors = BotonTexto.soloTexto(), onClick = { filtrosAbiertos = !filtrosAbiertos }) {
                     Text("${if (filtrosAbiertos) "Ocultar" else "Mostrar"} filtros (${estado.cantidadFiltros})")
                 }
             }
@@ -81,9 +81,9 @@ fun ListaScreen(onIrACrear: () -> Unit, onIrADetalle: (Int) -> Unit,
             }
             item {
                 if (estado.cantidadFiltros > 0 || estado.textoBusqueda.isNotBlank()) {
-                    TextButton(onClick = viewModel::limpiarFiltros) { Text("Limpiar filtros y búsqueda") }
+                    TextButton(colors = BotonTexto.soloTexto(), onClick = viewModel::limpiarFiltros) { Text("Limpiar filtros y búsqueda") }
                 }
-                Button(onClick = onIrACrear, modifier = Modifier.fillMaxWidth()) { Text("+ Nueva oportunidad") }
+                Button(colors = BotonGeneral.relleno(), onClick = onIrACrear, modifier = Modifier.fillMaxWidth()) { Text("+ Nueva oportunidad") }
                 if (estado.mensajeError.isNotBlank()) Text(estado.mensajeError, color = MaterialTheme.colorScheme.error)
                 if (estado.cargando) CircularProgressIndicator()
                 if (estado.erroresFechas.isNotEmpty()) {

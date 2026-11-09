@@ -7,6 +7,8 @@ import androidx.lifecycle.viewmodel.compose.viewModel
 import com.agencia.atenas.ui.componentes.Campo
 import com.agencia.atenas.ui.componentes.MensajeOperacion
 import com.agencia.atenas.ui.componentes.Pagina
+import com.agencia.atenas.ui.theme.relleno
+import com.agencia.atenas.ui.theme.BotonGeneral
 
 /** Indicadores ficticios opcionales del caso, sin obligar a inventar cantidades. */
 @Composable
@@ -63,7 +65,7 @@ fun ResultadoScreen(id: Int, onVolver: () -> Unit, viewModel: ResultadoViewModel
             error = estado.errores["aprendizajes"],
             enabled = !estado.guardando
         ) { viewModel.cambiar("aprendizajes", it) }
-        Button(onClick = { viewModel.guardar(id) }, enabled = !estado.guardando) {
+        Button(colors = BotonGeneral.relleno(), onClick = { viewModel.guardar(id) }, enabled = !estado.guardando) {
             Text(if (estado.guardando) "Guardando…" else "Guardar resultado")
         }
         MensajeOperacion(estado.mensaje, estado.esError)

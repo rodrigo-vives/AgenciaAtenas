@@ -47,6 +47,10 @@ import java.io.File
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.withContext
 import com.agencia.atenas.ui.componentes.MensajeOperacion
+import com.agencia.atenas.ui.theme.contorno
+import com.agencia.atenas.ui.theme.relleno
+import com.agencia.atenas.ui.theme.BotonContorno
+import com.agencia.atenas.ui.theme.BotonGeneral
 
 /** Bloque del detalle: solo recibe una oportunidad ya consultada y autorizada. */
 @Composable
@@ -63,7 +67,7 @@ fun RecursosOportunidad(item: OportunidadDetalle, viewModel: EvidenciaViewModel 
     LifecycleEventEffect(Lifecycle.Event.ON_RESUME) { viewModel.cargar(item.id) }
 
     Text("Fotografías de la oportunidad", style = MaterialTheme.typography.titleMedium)
-    Button(enabled = !estado.ocupado, onClick = {
+    Button(colors = BotonGeneral.relleno(), enabled = !estado.ocupado, onClick = {
         viewModel.preparar(item.id) { ruta ->
             try {
                 val uri = FileProvider.getUriForFile(context,
@@ -98,7 +102,7 @@ fun RecursosOportunidad(item: OportunidadDetalle, viewModel: EvidenciaViewModel 
     MensajeOperacion(estado.mensaje, estado.esError)
 
     Text("Calendario del dispositivo", style = MaterialTheme.typography.titleMedium)
-    OutlinedButton(onClick = {
+    OutlinedButton(colors = BotonContorno.contorno(), onClick = {
         try {
             val intervalo = intervaloCalendario(item.fechaInicio, item.fechaTermino, item.horario)
             val intent = Intent(Intent.ACTION_INSERT).apply {
@@ -193,7 +197,7 @@ private fun FotoAmpliada(imagen: ImageBitmap, numero: Int, onCerrar: () -> Unit)
                         Image(bitmap = imagen, contentDescription = "Vista ampliada de la fotografía $numero",
                             modifier = Modifier.weight(1f).fillMaxWidth(), contentScale = ContentScale.Fit)
                         Spacer(Modifier.height(12.dp))
-                        Button(onClick = { transicion.targetState = false }, modifier = Modifier.fillMaxWidth()) {
+                        Button(colors = BotonGeneral.relleno(), onClick = { transicion.targetState = false }, modifier = Modifier.fillMaxWidth()) {
                             Text("Cerrar")
                         }
                     }

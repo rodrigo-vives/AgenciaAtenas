@@ -9,6 +9,10 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.painterResource
 import com.agencia.atenas.R
 import androidx.compose.ui.unit.dp
+import com.agencia.atenas.ui.theme.contorno
+import com.agencia.atenas.ui.theme.soloTexto
+import com.agencia.atenas.ui.theme.BotonContorno
+import com.agencia.atenas.ui.theme.BotonTexto
 
 /*
  * Estos Composables reciben datos y funciones por parámetros, por eso sirven en varias pantallas.
@@ -42,7 +46,7 @@ fun Pagina(
             verticalArrangement = Arrangement.spacedBy(8.dp)
         ) {
             // Inicio no tiene pantalla anterior: su acción es Cerrar sesión, no Volver.
-            if (mostrarVolver) TextButton(onClick = onVolver) { Text("← Volver") }
+            if (mostrarVolver) TextButton(colors = BotonTexto.soloTexto(), onClick = onVolver) { Text("← Volver") }
             Text(titulo, style = MaterialTheme.typography.headlineSmall)
             contenido() // Inserta aquí lo que escribió la pantalla que utiliza Pagina.
         }
@@ -91,6 +95,7 @@ fun Selector(
 
     Box {
         OutlinedButton(
+            colors = BotonContorno.contorno(),
             onClick = { abierto = true },
             enabled = enabled && opciones.isNotEmpty()
         ) {

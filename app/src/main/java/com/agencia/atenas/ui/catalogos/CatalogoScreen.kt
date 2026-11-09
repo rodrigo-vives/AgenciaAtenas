@@ -11,6 +11,10 @@ import com.agencia.atenas.ui.componentes.Campo
 import com.agencia.atenas.ui.componentes.MensajeOperacion
 import com.agencia.atenas.ui.componentes.Pagina
 import com.agencia.atenas.ui.componentes.Selector
+import com.agencia.atenas.ui.theme.relleno
+import com.agencia.atenas.ui.theme.soloTexto
+import com.agencia.atenas.ui.theme.BotonGeneral
+import com.agencia.atenas.ui.theme.BotonTexto
 
 /**
  * Formulario y listado de organizaciones o contactos. esContacto decide cuál de los dos
@@ -138,7 +142,7 @@ fun CatalogoScreen(esContacto: Boolean,
                 enabled = !estadoFormulario.guardando
             ) { viewModel.cambiar("observaciones", it) }
         }
-        Button(onClick = {
+        Button(colors = BotonGeneral.relleno(), onClick = {
                 viewModel.guardar(esContacto)
             },
             enabled = !estadoFormulario.guardando) {
@@ -159,7 +163,7 @@ fun CatalogoScreen(esContacto: Boolean,
                             "Cargo: ${c.cargo} · Área: ${c.area}\n" +
                             "Correo: ${c.correo}\nTeléfono: ${c.telefono}\nMedio: ${c.medio}"
                     )
-                    TextButton(onClick = { onHistorial(c.id) }) { Text("Ver historial de contacto") }
+                    TextButton(colors = BotonTexto.soloTexto(), onClick = { onHistorial(c.id) }) { Text("Ver historial de contacto") }
                 }
             }
         } else {
@@ -168,7 +172,7 @@ fun CatalogoScreen(esContacto: Boolean,
                     Text(modifier = Modifier.padding(12.dp), text = "${o.nombre}\nTipo: ${o.tipo} · Rubro: ${o.rubro}\n" +
                         "Comuna: ${o.comuna} · Región: ${o.region}\nSitio: ${o.sitioWeb}\n" +
                         "Público: ${o.publicoAsociado}\nObservaciones: ${o.observaciones}")
-                    TextButton(onClick = { onHistorial(o.id) }) { Text("Ver eventos e historial") }
+                    TextButton(colors = BotonTexto.soloTexto(), onClick = { onHistorial(o.id) }) { Text("Ver eventos e historial") }
                 }
             }
         }

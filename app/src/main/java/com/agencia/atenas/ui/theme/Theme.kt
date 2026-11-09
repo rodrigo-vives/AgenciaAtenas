@@ -27,7 +27,7 @@ private val LightColorScheme = lightColorScheme(
 )
 
 private val PaletaIngreso = lightColorScheme(
-    primary = MoradoAccion,
+    primary = AcentoIngreso,
     onPrimary = SuperficieIngreso,
     background = FondoIngreso,
     onBackground = AzulMarca,
@@ -46,13 +46,18 @@ fun TemaIngreso(content: @Composable () -> Unit) {
     MaterialTheme(colorScheme = PaletaIngreso, typography = Typography, content = content)
 }
 
-// Colores de «Editar oportunidad» y «Seguimiento e historial».
-// Cambia el fondo y el texto aquí para personalizar solo estos dos botones.
+// Material 3 conserva sus colores originales cuando el valor es Color.Unspecified.
 @Composable
-fun coloresBotonesDetalle(): ButtonColors = ButtonDefaults.buttonColors(
-    containerColor = MaterialTheme.colorScheme.primary,
-    contentColor = MaterialTheme.colorScheme.onPrimary
-)
+fun ColoresBoton.relleno(): ButtonColors =
+    ButtonDefaults.buttonColors(containerColor = fondo, contentColor = texto)
+
+@Composable
+fun ColoresBoton.soloTexto(): ButtonColors =
+    ButtonDefaults.textButtonColors(containerColor = fondo, contentColor = texto)
+
+@Composable
+fun ColoresBoton.contorno(): ButtonColors =
+    ButtonDefaults.outlinedButtonColors(containerColor = fondo, contentColor = texto)
 
 @Composable
 fun AgenciaAtenasTheme(

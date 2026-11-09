@@ -17,6 +17,10 @@ import com.agencia.atenas.utils.SesionActual
 import com.agencia.atenas.utils.fechas.SituacionRecordatorio
 import com.agencia.atenas.utils.fechas.situacionRecordatorio
 import com.agencia.atenas.utils.validacion.Fechas
+import com.agencia.atenas.ui.theme.relleno
+import com.agencia.atenas.ui.theme.soloTexto
+import com.agencia.atenas.ui.theme.BotonGeneral
+import com.agencia.atenas.ui.theme.BotonTexto
 
 /**
  * Recordatorios internos: se muestran al abrir Inicio, sin notificaciones del sistema
@@ -70,13 +74,13 @@ fun InicioScreen(
                 Text("${atrasados.size} gestiones atrasadas · $paraHoy acciones para hoy")
             }
         }
-        TextButton(onClick = onPerfil) { Text("Mi perfil") }
+        TextButton(colors = BotonTexto.soloTexto(), onClick = onPerfil) { Text("Mi perfil") }
         Text("Accesos", style = MaterialTheme.typography.titleMedium)
-        Button(onClick = onLista) { Text("Oportunidades") }
-        Button(onClick = onOrganizaciones) { Text("Organizaciones") }
-        Button(onClick = onContactos) { Text("Contactos") }
+        Button(colors = BotonGeneral.relleno(), onClick = onLista) { Text("Oportunidades") }
+        Button(colors = BotonGeneral.relleno(), onClick = onOrganizaciones) { Text("Organizaciones") }
+        Button(colors = BotonGeneral.relleno(), onClick = onContactos) { Text("Contactos") }
         if (SesionActual.esSupervisor) {
-            Button(onClick = onSupervisor) { Text("Panel de supervisor") }
+            Button(colors = BotonGeneral.relleno(), onClick = onSupervisor) { Text("Panel de supervisor") }
         }
 
         if (!estado.cargando) {
@@ -105,7 +109,7 @@ fun InicioScreen(
             Text("Próximos eventos", style = MaterialTheme.typography.titleMedium)
             if (proximos.isEmpty()) Text("No hay eventos próximos registrados")
             proximos.forEach { evento ->
-                TextButton(onClick = { onDetalle(evento.id) }) {
+                TextButton(colors = BotonTexto.soloTexto(), onClick = { onDetalle(evento.id) }) {
                     Text("${Fechas.visible(evento.fechaInicio)} · ${evento.nombreOportunidad}")
                 }
             }
@@ -116,24 +120,24 @@ fun InicioScreen(
             Text("Oportunidades sin contacto (${sinContacto.size})", style = MaterialTheme.typography.titleMedium)
             if (sinContacto.isEmpty()) Text("Todas las oportunidades activas tienen contacto asociado")
             sinContacto.forEach { oportunidad ->
-                TextButton(onClick = { onDetalle(oportunidad.id) }) { Text(oportunidad.nombreOportunidad) }
+                TextButton(colors = BotonTexto.soloTexto(), onClick = { onDetalle(oportunidad.id) }) { Text(oportunidad.nombreOportunidad) }
             }
             // No tener una tarea pendiente no equivale a tener seguimiento.
             // Esta sección identifica oportunidades sin ninguna gestión comercial registrada.
             Text("Oportunidades sin seguimiento (${estado.sinSeguimiento.size})", style = MaterialTheme.typography.titleMedium)
             if (estado.sinSeguimiento.isEmpty()) Text("Todas las oportunidades activas tienen alguna gestión registrada")
             estado.sinSeguimiento.forEach { oportunidad ->
-                TextButton(onClick = { onDetalle(oportunidad.id) }) { Text(oportunidad.nombreOportunidad) }
+                TextButton(colors = BotonTexto.soloTexto(), onClick = { onDetalle(oportunidad.id) }) { Text(oportunidad.nombreOportunidad) }
             }
             Text("Propuestas sin respuesta (${sinRespuesta.size})", style = MaterialTheme.typography.titleMedium)
             if (sinRespuesta.isEmpty()) Text("No hay propuestas registradas en espera de respuesta")
             sinRespuesta.forEach { oportunidad ->
-                TextButton(onClick = { onDetalle(oportunidad.id) }) {
+                TextButton(colors = BotonTexto.soloTexto(), onClick = { onDetalle(oportunidad.id) }) {
                     Text("${oportunidad.nombreOportunidad} · ${oportunidad.estado.etiqueta}")
                 }
             }
         }
-        Button(onClick = onSalir) { Text("Cerrar sesión") }
+        Button(colors = BotonGeneral.relleno(), onClick = onSalir) { Text("Cerrar sesión") }
     }
 }
 
@@ -159,7 +163,7 @@ private fun TarjetaRecordatorio(
             Text("Oportunidad: ${tarea.nombreOportunidad}")
             Text("Fecha: ${Fechas.visible(tarea.fechaProxima)}")
             Text("Responsable actual: ${tarea.responsable}")
-            TextButton(onClick = onResolver) { Text("Registrar resultado") }
+            TextButton(colors = BotonTexto.soloTexto(), onClick = onResolver) { Text("Registrar resultado") }
         }
     }
 }

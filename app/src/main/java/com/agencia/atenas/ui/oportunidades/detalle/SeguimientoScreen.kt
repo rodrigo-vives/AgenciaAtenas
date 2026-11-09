@@ -10,6 +10,10 @@ import com.agencia.atenas.utils.validacion.Fechas
 import com.agencia.atenas.ui.componentes.Campo
 import com.agencia.atenas.ui.componentes.MensajeOperacion
 import com.agencia.atenas.ui.componentes.Pagina
+import com.agencia.atenas.ui.theme.relleno
+import com.agencia.atenas.ui.theme.soloTexto
+import com.agencia.atenas.ui.theme.BotonGeneral
+import com.agencia.atenas.ui.theme.BotonTexto
 
 /**
  * Permite registrar una gestión libre o completar una acción programada con resultado.
@@ -47,11 +51,11 @@ fun SeguimientoScreen(
                 !estado.ocupado) { viewModel.cambiar("fechaProxima", it) }
             Campo("Observaciones", estado.observaciones, estado.errores["observaciones"],
                 !estado.ocupado) { viewModel.cambiar("observaciones", it) }
-            Button(onClick = { viewModel.registrar() }, enabled = !estado.ocupado) {
+            Button(colors = BotonGeneral.relleno(), onClick = { viewModel.registrar() }, enabled = !estado.ocupado) {
                 Text(if (estado.ocupado) "Guardando…" else if (resolviendo)
                     "Completar acción y guardar resultado" else "Registrar gestión")
             }
-            TextButton(onClick = { viewModel.limpiarFormulario() }, enabled = !estado.ocupado) {
+            TextButton(colors = BotonTexto.soloTexto(), onClick = { viewModel.limpiarFormulario() }, enabled = !estado.ocupado) {
                 Text(if (resolviendo) "Cancelar y limpiar formulario" else "Limpiar formulario")
             }
             // El resultado se muestra cerca del botón, no al final de un historial largo.
@@ -75,7 +79,7 @@ fun SeguimientoScreen(
                         } else {
                             Text("Acción todavía sin completar")
                             if (!resolviendo) {
-                                TextButton(onClick = { viewModel.prepararResolucion(gestion.seguimiento.id) },
+                                TextButton(colors = BotonTexto.soloTexto(), onClick = { viewModel.prepararResolucion(gestion.seguimiento.id) },
                                     enabled = !estado.ocupado) {
                                     Text("Registrar resultado de esta acción")
                                 }

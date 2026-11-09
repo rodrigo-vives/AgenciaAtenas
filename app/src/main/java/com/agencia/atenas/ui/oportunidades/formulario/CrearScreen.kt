@@ -12,6 +12,8 @@ import androidx.lifecycle.viewmodel.compose.viewModel
 import com.agencia.atenas.ui.componentes.Campo
 import com.agencia.atenas.ui.componentes.Pagina
 import com.agencia.atenas.ui.componentes.Selector
+import com.agencia.atenas.ui.theme.relleno
+import com.agencia.atenas.ui.theme.BotonGeneral
 
 /*
  * Recorrido al escribir:
@@ -138,7 +140,7 @@ fun CrearScreen(id: Int = 0,
             }
             if (estado.mensaje.isNotBlank()) Text(estado.mensaje,
                 color = MaterialTheme.colorScheme.error)
-            Button(onClick = {
+            Button(colors = BotonGeneral.relleno(), onClick = {
                     viewModel.guardar()
                 },
                 enabled = !estado.guardando,
